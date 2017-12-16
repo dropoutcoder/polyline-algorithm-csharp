@@ -11,7 +11,7 @@ namespace Cloudikka.PolylineAlgorithm {
 	/// <summary>
 	/// Defines the <see cref="IPolylineDecoder{TOut}" />
 	/// </summary>
-	/// <typeparam name="TOut"></typeparam>
+	/// <typeparam name="TOut"> </typeparam>
 	public interface IPolylineDecoder<TOut> {
 		#region Methods
 
