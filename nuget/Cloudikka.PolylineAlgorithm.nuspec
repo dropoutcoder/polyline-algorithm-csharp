@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$nuget.id$</id>
+    <version>$nuget.version$</version>
+    <authors>$nuget.authors$</authors>
+    <owners>$nuget.owners$</owners>
+    <description>$nuget.description$</description>
+    <copyright>$nuget.copyright$</copyright>
+    <tags>$nuget.tags$</tags>
+  </metadata>
+</package>
