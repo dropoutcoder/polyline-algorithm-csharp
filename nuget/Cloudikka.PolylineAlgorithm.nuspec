@@ -2,11 +2,14 @@
 <package>
   <metadata>
     <id>$nuget.id$</id>
+    <title>$nuget.title$</title>
     <version>$nuget.version$</version>
     <authors>$nuget.authors$</authors>
     <owners>$nuget.owners$</owners>
     <description>$nuget.description$</description>
     <copyright>$nuget.copyright$</copyright>
     <tags>$nuget.tags$</tags>
+    <licenseUrl>$nuget.licenceurl$</licenseUrl>
+    <projectUrl>$nuget.projecturl$</projectUrl>
   </metadata>
 </package>
