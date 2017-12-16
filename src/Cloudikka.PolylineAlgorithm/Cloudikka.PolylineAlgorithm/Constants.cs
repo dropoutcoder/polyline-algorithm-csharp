@@ -11,12 +11,12 @@ namespace Cloudikka.PolylineAlgorithm {
 		#region Constants
 
 		/// <summary>
-		/// Defines the Precision
+		/// Defines the coordinate precision
 		/// </summary>
 		public const double Precision = 1E5;
 
 		/// <summary>
-		/// Defines the ShiftLength
+		/// Defines the shift length
 		/// </summary>
 		public const int ShiftLength = 5;
 
@@ -29,17 +29,17 @@ namespace Cloudikka.PolylineAlgorithm {
 			#region Constants
 
 			/// <summary>
-			/// Defines the QuestionMark
+			/// Defines the ASCII QuestionMark
 			/// </summary>
 			public const int QuestionMark = 63;
 
 			/// <summary>
-			/// Defines the Space
+			/// Defines the ASCII Space
 			/// </summary>
 			public const int Space = 32;
 
 			/// <summary>
-			/// Defines the UnitSeparator
+			/// Defines the ASCII UnitSeparator
 			/// </summary>
 			public const int UnitSeparator = 31;
 
@@ -53,22 +53,22 @@ namespace Cloudikka.PolylineAlgorithm {
 			#region Constants
 
 			/// <summary>
-			/// Defines the MaxLatitude
+			/// Defines the maximum value for Latitude
 			/// </summary>
 			public const int MaxLatitude = 90;
 
 			/// <summary>
-			/// Defines the MaxLongitude
+			/// Defines the maximum value for longitude
 			/// </summary>
 			public const int MaxLongitude = 180;
 
 			/// <summary>
-			/// Defines the MinLatitude
+			/// Defines the minimum value for latitude
 			/// </summary>
 			public const int MinLatitude = -MaxLatitude;
 
 			/// <summary>
-			/// Defines the MinLongitude
+			/// Defines the minimum value for longitude
 			/// </summary>
 			public const int MinLongitude = -MaxLongitude;
 
