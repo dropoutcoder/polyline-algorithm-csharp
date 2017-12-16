@@ -16,10 +16,10 @@ namespace Cloudikka.PolylineAlgorithm {
 		#region Methods
 
 		/// <summary>
-		/// The Decode
+		/// Method decoding polyline string to object
 		/// </summary>
-		/// <param name="source">The <see cref="string"/></param>
-		/// <returns>The <see cref="IEnumerable{TOut}"/></returns>
+		/// <param name="source">The <see cref="string"/>Polyline string to decode</param>
+		/// <returns>The <see cref="IEnumerable{TOut}"/>Decoded polyline object</returns>
 		IEnumerable<TOut> Decode(string source);
 
 		#endregion
