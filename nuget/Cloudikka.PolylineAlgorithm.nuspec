@@ -12,4 +12,7 @@
     <licenseUrl>$nuget.licenceurl$</licenseUrl>
     <projectUrl>$nuget.projecturl$</projectUrl>
   </metadata>
+  <files>
+    <file src="..\src\$nuget.id$\bin\$configuration$\netstandard2.0\$nuget.id$.dll" target="lib\netstandard2.0" />
+  </files>
 </package>
