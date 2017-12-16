@@ -13,7 +13,7 @@ namespace Cloudikka.PolylineAlgorithm.Validation {
 		/// <summary>
 		/// Performs coordinate validation
 		/// </summary>
-		/// <param name="coordinate">Coordinate</param>
+		/// <param name="coordinate">Coordinate to validate</param>
 		/// <returns>Returns validation result</returns>
 		public static bool IsValid((double Latitude, double Longitude) coordinate) {
 			return IsValidLatitude(coordinate.Latitude) && IsValidLongitude(coordinate.Longitude);
@@ -22,7 +22,7 @@ namespace Cloudikka.PolylineAlgorithm.Validation {
 		/// <summary>
 		/// Performs latitude validation
 		/// </summary>
-		/// <param name="latitude">A double precision number</param>
+		/// <param name="latitude">Latitude value to validate</param>
 		/// <returns>Returns validation result</returns>
 		public static bool IsValidLatitude(double latitude) {
 			return latitude >= Constants.Coordinate.MinLatitude && latitude <= Constants.Coordinate.MaxLatitude;
@@ -31,7 +31,7 @@ namespace Cloudikka.PolylineAlgorithm.Validation {
 		/// <summary>
 		/// Performs longitude validation
 		/// </summary>
-		/// <param name="longitude">A double precision number</param>
+		/// <param name="longitude">Longitude value to validate</param>
 		/// <returns>Returns validation result</returns>
 		public static bool IsValidLongitude(double longitude) {
 			return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
