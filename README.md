@@ -1,1 +1,1 @@
-# polyline-algorythm-csharp
+# polyline-algorithm-csharp
