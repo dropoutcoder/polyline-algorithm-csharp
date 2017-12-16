@@ -5,6 +5,7 @@
 
 namespace Cloudikka.PolylineAlgorithm.Tests {
 	using System;
+	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	/// <summary>
@@ -27,7 +28,6 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decoder_Decode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentException))]
 		public void Decoder_Decode_EmptyInput() {
 			Assert.ThrowsException<ArgumentException>(() => _decoder.Decode(Defaults.EmptyPolyline));
 		}
@@ -36,11 +36,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decoder_Decode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(InvalidOperationException))]
 		public void Decoder_Decode_InvalidInput() {
-			var result = _decoder.Decode(Defaults.InvalidPolyline);
-
-			Assert.AreEqual(Defaults.InvalidCoordinates, result);
+			Assert.ThrowsException<InvalidOperationException>(() => _decoder.Decode(Defaults.InvalidPolyline));
 		}
 
 		/// <summary>
@@ -58,7 +55,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		public void Decoder_Decode_ValidInput() {
 			var result = _decoder.Decode(Defaults.ValidPolyline);
 
-			Assert.AreEqual(Defaults.ValidPolyline, result);
+			CollectionAssert.AreEquivalent(Defaults.ValidCoordinates.ToList(), result.ToList());
 		}
 
 		#endregion

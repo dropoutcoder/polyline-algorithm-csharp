@@ -19,7 +19,6 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentException))]
 		public void Decode_EmptyInput() {
 			Assert.ThrowsException<ArgumentException>(() => PolylineAlgorithm.Decode(String.Empty.ToCharArray()));
 		}
@@ -28,11 +27,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(InvalidOperationException))]
 		public void Decode_InvalidInput() {
-			var result = PolylineAlgorithm.Decode(Defaults.InvalidPolyline.ToCharArray());
-
-			Assert.AreEqual(Defaults.InvalidCoordinates, result);
+			Assert.ThrowsException<InvalidOperationException>(() => PolylineAlgorithm.Decode(Defaults.InvalidPolyline.ToCharArray()));
 		}
 
 		/// <summary>
@@ -57,7 +53,6 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentException))]
 		public void Encode_EmptyInput() {
 			Assert.ThrowsException<ArgumentException>(() => PolylineAlgorithm.Encode(Defaults.EmptyCoordinates));
 		}
@@ -66,11 +61,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(InvalidOperationException))]
 		public void Encode_InvalidInput() {
-			var result = PolylineAlgorithm.Encode(Defaults.InvalidCoordinates);
-
-			Assert.AreEqual(Defaults.InvalidPolyline, result);
+			Assert.ThrowsException<InvalidOperationException>(() => PolylineAlgorithm.Encode(Defaults.InvalidCoordinates));
 		}
 
 		/// <summary>

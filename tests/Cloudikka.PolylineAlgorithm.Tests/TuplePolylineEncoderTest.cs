@@ -28,7 +28,6 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encoder_Encode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentException))]
 		public void Encoder_Encode_EmptyInput() {
 			Assert.ThrowsException<ArgumentException>(() => _encoder.Encode(Enumerable.Empty<(double, double)>()));
 		}
@@ -37,18 +36,14 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encoder_Encode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(InvalidOperationException))]
 		public void Encoder_Encode_InvalidInput() {
-			var result = _encoder.Encode(Defaults.InvalidCoordinates);
-
-			Assert.AreEqual(Defaults.InvalidPolyline, result);
+			Assert.ThrowsException<InvalidOperationException>(() => _encoder.Encode(Defaults.InvalidCoordinates));
 		}
 
 		/// <summary>
 		/// The Encoder_Encode_NullInput
 		/// </summary>
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentException))]
 		public void Encoder_Encode_NullInput() {
 			Assert.ThrowsException<ArgumentException>(() => _encoder.Encode(null));
 		}
