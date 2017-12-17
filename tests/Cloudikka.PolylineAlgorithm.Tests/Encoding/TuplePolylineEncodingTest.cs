@@ -64,7 +64,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Encoding {
 		/// </summary>
 		[TestMethod]
 		public void Encoding_Encode_EmptyInput() {
-			Assert.ThrowsException<ArgumentException>(() => _encoding.Encode(Enumerable.Empty<(double, double)>()));
+			Assert.ThrowsException<ArgumentException>(() => _encoding.Encode(Defaults.EmptyCoordinates));
 		}
 
 		/// <summary>
