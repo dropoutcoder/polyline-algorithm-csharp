@@ -70,7 +70,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// </summary>
 		[TestMethod]
 		public void Encode_NullInput() {
-			Assert.ThrowsException<ArgumentException>(() => PolylineAlgorithm.Encode(Defaults.NullCoordinates));
+			Assert.ThrowsException<ArgumentException>(() => PolylineAlgorithm.Encode(null));
 		}
 
 		/// <summary>

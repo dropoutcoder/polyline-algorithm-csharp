@@ -28,23 +28,16 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// Defines the InvalidCoordinates
 		/// </summary>
 		public static readonly IEnumerable<(double Latitude, double Longitude)> InvalidCoordinates = new[] {
-			(99.47383, 180.06250)
+			(149.47383, 259.06250),
+			(-158.37407, 225.31250),
+			(152.99363, -220.93750),
+			(-144.49024, -274.37500)
 		};
 
 		/// <summary>
 		/// Defines the InvalidPolyline
 		/// </summary>
 		public static readonly string InvalidPolyline = "mnc~Qsm_ja@";
-
-		/// <summary>
-		/// Defines the NullCoordinates
-		/// </summary>
-		public static readonly IEnumerable<(double Latitude, double Longitude)> NullCoordinates = null;
-
-		/// <summary>
-		/// Defines the NullPolyline
-		/// </summary>
-		public static readonly string NullPolyline = null;
 
 		/// <summary>
 		/// Defines the ValidCoordinates
