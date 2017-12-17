@@ -14,7 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{7F9807A1
 		..\..\nuget\Cloudikka.PolylineAlgorithm.nuspec = ..\..\nuget\Cloudikka.PolylineAlgorithm.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudikka.PolylineAlgorithm.Tests", "..\..\tests\Cloudikka.PolylineAlgorithm.Tests\Cloudikka.PolylineAlgorithm.Tests.csproj", "{10B555A6-E4C9-4828-B4A6-64E248CC1D14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cloudikka.PolylineAlgorithm.Tests", "..\..\tests\Cloudikka.PolylineAlgorithm.Tests\Cloudikka.PolylineAlgorithm.Tests.csproj", "{10B555A6-E4C9-4828-B4A6-64E248CC1D14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B9F2E949-4493-4131-84B1-C6AB372B62F5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\docs\docfx.json = ..\..\docs\docfx.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
