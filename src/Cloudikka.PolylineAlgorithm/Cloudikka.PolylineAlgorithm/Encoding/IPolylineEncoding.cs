@@ -16,14 +16,14 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		#region Methods
 
 		/// <summary>
-		/// The Decode
+		/// Method performs decode operation and coversion to destination object
 		/// </summary>
 		/// <param name="source">The <see cref="string"/></param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
 		IEnumerable<T> Decode(string source);
 
 		/// <summary>
-		/// The Encode
+		/// Method performs conversion to base object and encode operation.
 		/// </summary>
 		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
 		/// <returns>The <see cref="string"/></returns>

@@ -16,13 +16,13 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		#region Methods
 
 		/// <summary>
-		/// The Decode
+		/// Method performs decode operation and coversion to destination object
 		/// </summary>
 		/// <param name="source">The <see cref="string"/></param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
 		public IEnumerable<T> Decode(string source) {
 			if (String.IsNullOrEmpty(source)) {
-				throw new ArgumentException(ExceptionMessageResource.SourcePolylineStringCannotBeNullOrEmpty, nameof(source));
+				throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(source));
 			}
 
 			char[] polyline = source.ToCharArray();
@@ -32,13 +32,13 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		}
 
 		/// <summary>
-		/// The Encode
+		/// Method performs conversion to base object and encode operation.
 		/// </summary>
 		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
 		/// <returns>The <see cref="string"/></returns>
 		public string Encode(IEnumerable<T> source) {
 			if (source == null || !source.Any()) {
-				throw new ArgumentException(ExceptionMessageResource.SourceCharArrayCannotBeNullOrEmpty, nameof(source));
+				throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(source));
 			}
 
 			var coordinates = source.Select(s => GetCoordinate(s));

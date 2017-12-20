@@ -17,13 +17,15 @@ namespace Cloudikka.PolylineAlgorithm {
 		#region Methods
 
 		/// <summary>
-		/// The Decode
+		/// Method performs decode operation.
 		/// </summary>
-		/// <param name="polyline">The <see cref="char[]"/></param>
-		/// <returns>The <see cref="IEnumerable{(double Latitude, double Longitude)}"/></returns>
+		/// <param name="polyline">Encoded polyline char array.</param>
+		/// <returns>Returns decoded coordinates</returns>
+		/// <exception cref="ArgumentException">Passed polyline argument is null or empty char array.</exception>
+		/// <exception cref="InvalidOperationException">Passed polyline argument is not in correct format.</exception>
 		public static IEnumerable<(double Latitude, double Longitude)> Decode(char[] polyline) {
 			if (polyline == null || !polyline.Any()) {
-				throw new ArgumentException(ExceptionMessageResource.SourcePolylineStringCannotBeNullOrEmpty, nameof(polyline));
+				throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(polyline));
 			}
 
 			int index = 0;
@@ -33,17 +35,17 @@ namespace Cloudikka.PolylineAlgorithm {
 
 			while (index < polyline.Length) {
 				if (!TryCalculateNext(polyline, ref index, ref latitude)) {
-					throw new InvalidOperationException(ExceptionMessageResource.SourcePolylineStringIsMalformed);
+					throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
 				}
 
 				if (!TryCalculateNext(polyline, ref index, ref longitude)) {
-					throw new InvalidOperationException(ExceptionMessageResource.SourcePolylineStringIsMalformed);
+					throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
 				}
 
 				var coordinate = (GetPreciseNumber(latitude), GetPreciseNumber(longitude));
 
 				if (!CoordinateValidator.IsValid(coordinate)) {
-					throw new InvalidOperationException(ExceptionMessageResource.SourcePolylineStringIsMalformed);
+					throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
 				}
 
 				result.Add(coordinate);
@@ -53,17 +55,17 @@ namespace Cloudikka.PolylineAlgorithm {
 		}
 
 		/// <summary>
-		/// The Encode
+		/// Method performs encode operation.
 		/// </summary>
 		/// <param name="coordinates">The <see cref="IEnumerable{(double Latitude, double Longitude)}"/></param>
 		/// <returns>The <see cref="string"/></returns>
 		public static string Encode(IEnumerable<(double Latitude, double Longitude)> coordinates) {
 			if (coordinates == null || !coordinates.Any()) {
-				throw new ArgumentException(ExceptionMessageResource.SourceCharArrayCannotBeNullOrEmpty, nameof(coordinates));
+				throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(coordinates));
 			}
 
 			if (coordinates.Any(c => !CoordinateValidator.IsValid(c))) {
-				throw new InvalidOperationException(ExceptionMessageResource.SourceCoordinatesAreInvalid);
+				throw new InvalidOperationException(ExceptionMessageResource.CoordinatesAreInvalid);
 			}
 
 			var sb = new StringBuilder();
