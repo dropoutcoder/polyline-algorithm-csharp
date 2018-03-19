@@ -61,6 +61,15 @@ namespace Cloudikka.PolylineAlgorithm {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to One or more coordinates are invalid. Check InnerExceptions property for details..
+        /// </summary>
+        internal static string AggregateExceptionCoordinatesAreInvalidErrorMessage {
+            get {
+                return ResourceManager.GetString("AggregateExceptionCoordinatesAreInvalidErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument cannot be null -or- empty char array..
         /// </summary>
         internal static string ArgumentCannotBeNullOrEmpty {
@@ -70,11 +79,11 @@ namespace Cloudikka.PolylineAlgorithm {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coordinates argument is invalid..
+        ///   Looks up a localized string similar to Latitude: {0}, Longitude: {1}) is invalid. Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180..
         /// </summary>
-        internal static string CoordinatesAreInvalid {
+        internal static string ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat {
             get {
-                return ResourceManager.GetString("CoordinatesAreInvalid", resourceCulture);
+                return ResourceManager.GetString("ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat", resourceCulture);
             }
         }
         

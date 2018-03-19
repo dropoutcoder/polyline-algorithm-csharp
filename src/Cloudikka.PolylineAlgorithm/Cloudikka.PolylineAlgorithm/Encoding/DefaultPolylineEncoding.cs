@@ -5,26 +5,26 @@
 
 namespace Cloudikka.PolylineAlgorithm.Encoding {
 	/// <summary>
-	/// Defines the <see cref="TuplePolylineEncoding" />
+	/// Defines default polyline encoding with generic <see cref="System.ValueTuple[double, double]"/> 
 	/// </summary>
-	public sealed class TuplePolylineEncoding : PolylineEncoding<(double Latitude, double Longitude)> {
+	public class DefaultPolylineEncoding : PolylineEncoding<(double Latitude, double Longitude)> {
 		#region Methods
 
 		/// <summary>
-		/// The CreateResult
+		/// Method creates <see cref="System.ValueTuple[double, double]"/> result from passed latitude and longitude arguments
 		/// </summary>
-		/// <param name="latitude">The <see cref="double"/></param>
-		/// <param name="longitude">The <see cref="double"/></param>
-		/// <returns>The <see cref="(double Latitude, double Longitude)"/></returns>
+		/// <param name="latitude">Latitude value</param>
+		/// <param name="longitude">Longitude value</param>
+		/// <returns>Returns created instance of <see cref="System.ValueTuple[double, double]"/></returns>
 		protected override (double Latitude, double Longitude) CreateResult(double latitude, double longitude) {
 			return (latitude, longitude);
 		}
 
 		/// <summary>
-		/// The GetCoordinate
+		/// Method creates <see cref="System.ValueTuple[double, double]"/>
 		/// </summary>
 		/// <param name="source">The <see cref="(double Latitude, double Longitude)"/></param>
-		/// <returns>The <see cref="(double Latitude, double Longitude)"/></returns>
+		/// <returns>Returns created coordinate <see cref="System.ValueTuple[double, double]"/></returns>
 		protected override (double Latitude, double Longitude) GetCoordinate((double Latitude, double Longitude) source) {
 			return source;
 		}

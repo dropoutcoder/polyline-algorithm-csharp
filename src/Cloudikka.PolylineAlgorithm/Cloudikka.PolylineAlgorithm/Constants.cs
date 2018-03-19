@@ -5,7 +5,7 @@
 
 namespace Cloudikka.PolylineAlgorithm {
 	/// <summary>
-	/// Defines the <see cref="Constants" />
+	/// Defines global constant values
 	/// </summary>
 	internal static class Constants {
 		#region Constants
@@ -23,7 +23,7 @@ namespace Cloudikka.PolylineAlgorithm {
 		#endregion
 
 		/// <summary>
-		/// Defines the <see cref="ASCII" />
+		/// Defines ASCII characters constant values
 		/// </summary>
 		internal static class ASCII {
 			#region Constants
@@ -47,7 +47,7 @@ namespace Cloudikka.PolylineAlgorithm {
 		}
 
 		/// <summary>
-		/// Defines the <see cref="Coordinate" />
+		/// Defines coordinates constant values
 		/// </summary>
 		internal static class Coordinate {
 			#region Constants

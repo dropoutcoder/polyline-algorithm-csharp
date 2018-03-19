@@ -11,6 +11,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 	/// Defines the <see cref="CoordinateValidatorTest" />
 	/// </summary>
 	[TestClass]
+	[TestCategory(nameof(CoordinateValidator))]
 	public class CoordinateValidatorTest {
 		#region Methods
 
@@ -19,7 +20,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValid_InvalidInput() {
-			foreach (var item in Defaults.InvalidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Invalid) {
 				var result = CoordinateValidator.IsValid(item);
 
 				Assert.IsFalse(result);
@@ -31,7 +32,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValid_ValidInput() {
-			foreach (var item in Defaults.ValidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Valid) {
 				var result = CoordinateValidator.IsValid(item);
 
 				Assert.IsTrue(result);
@@ -43,7 +44,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValidLatitude_InvalidInput() {
-			foreach (var item in Defaults.InvalidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Invalid) {
 				var result = CoordinateValidator.IsValidLatitude(item.Latitude);
 
 				Assert.IsFalse(result);
@@ -55,7 +56,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValidLatitude_ValidInput() {
-			foreach (var item in Defaults.ValidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Valid) {
 				var result = CoordinateValidator.IsValidLatitude(item.Latitude);
 
 				Assert.IsTrue(result);
@@ -67,7 +68,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValidLongitude_InvalidInput() {
-			foreach (var item in Defaults.InvalidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Invalid) {
 				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
 				Assert.IsFalse(result);
@@ -79,7 +80,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// </summary>
 		[TestMethod]
 		public void IsValidLongitude_ValidInput() {
-			foreach (var item in Defaults.ValidCoordinates) {
+			foreach (var item in Defaults.Coordinate.Valid) {
 				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
 				Assert.IsTrue(result);

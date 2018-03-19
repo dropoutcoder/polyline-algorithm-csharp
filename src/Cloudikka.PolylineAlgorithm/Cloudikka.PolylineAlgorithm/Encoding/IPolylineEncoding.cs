@@ -9,24 +9,24 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 	#region Interfaces
 
 	/// <summary>
-	/// Defines the <see cref="IPolylineEncoding{T}" />
+	/// Defines base interface for all polyline encodings
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">Desired type used to decode to and encode from</typeparam>
 	public interface IPolylineEncoding<T> {
 		#region Methods
 
 		/// <summary>
-		/// Method performs decode operation and coversion to destination object
+		/// Method performs decoding from polyline encoded <see cref="System.String"/> to <see cref="IEnumerable{T}"/>
 		/// </summary>
-		/// <param name="source">The <see cref="string"/></param>
+		/// <param name="source">The <see cref="string"/> as polyline encoded source</param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
 		IEnumerable<T> Decode(string source);
 
 		/// <summary>
-		/// Method performs conversion to base object and encode operation.
+		/// Method performs encoding from generic type to polyline encoded <see cref="System.String"/>
 		/// </summary>
-		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
-		/// <returns>The <see cref="string"/></returns>
+		/// <param name="source">Coordinates to encode</param>
+		/// <returns>Polyline encoded result</returns>
 		string Encode(IEnumerable<T> source);
 
 		#endregion

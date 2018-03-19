@@ -8,15 +8,15 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 	using System.Collections.Generic;
 	using System.Linq;
 
-	/// <summary>
-	/// Defines the <see cref="PolylineEncoding{T}" />
+	/// /// <summary>
+	/// Defines base class for all polyline encodings
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	public abstract class PolylineEncoding<T> : IPolylineEncoding<T> {
 		#region Methods
 
 		/// <summary>
-		/// Method performs decode operation and coversion to destination object
+		/// Method performs decode operation and coversion to desired type
 		/// </summary>
 		/// <param name="source">The <see cref="string"/></param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
@@ -32,7 +32,7 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		}
 
 		/// <summary>
-		/// Method performs conversion to base object and encode operation.
+		/// Method performs conversion to coordinate tuple and encode operation.
 		/// </summary>
 		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
 		/// <returns>The <see cref="string"/></returns>
@@ -47,11 +47,11 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		}
 
 		/// <summary>
-		/// The CreateResult
+		/// Method creates <see cref="T"/> result from passed latitude and longitude arguments
 		/// </summary>
-		/// <param name="latitude">The <see cref="double"/></param>
-		/// <param name="longitude">The <see cref="double"/></param>
-		/// <returns>The <see cref="T"/></returns>
+		/// <param name="latitude">Latitude value</param>
+		/// <param name="longitude">Longitude value</param>
+		/// <returns>Returns created instance of <see cref="T"/></returns>
 		protected abstract T CreateResult(double latitude, double longitude);
 
 		/// <summary>

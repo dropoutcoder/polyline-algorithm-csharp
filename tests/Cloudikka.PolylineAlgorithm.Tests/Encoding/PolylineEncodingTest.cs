@@ -1,21 +1,21 @@
-//  
-// Copyright (c) Petr är·mek. All rights reserved.  
+Ôªø//  
+// Copyright (c) Petr ≈†r√°mek. All rights reserved.  
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.  
 //
 
-namespace Cloudikka.PolylineAlgorithm.Tests {
+namespace Cloudikka.PolylineAlgorithm.Tests.Encoding {
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-	using System.Linq.Expressions;
+	using Cloudikka.PolylineAlgorithm.Encoding;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	/// <summary>
-	/// Defines the <see cref="PolylineAlgorithmTest" />
+	/// Defines the <see cref="PolylineEncodingTest" />
 	/// </summary>
 	[TestClass]
-	[TestCategory(nameof(PolylineAlgorithm))]
-	public class PolylineAlgorithmTest {
+	[TestCategory(nameof(PolylineEncoding<char[]>))]
+	public class PolylineEncodingTest : PolylineEncoding<(double latitude, double longitude)> {
 		#region Methods
 
 		/// <summary>
@@ -24,11 +24,11 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		[TestMethod]
 		public void Decode_NullInput() {
 			// Arrange
-			var nullPolylineCharArray = (char[])null;
+			var nullPolylineString = (string)null;
 
 			// Act
 			void DecodeNullPolylineCharArray() {
-				PolylineAlgorithm.Decode(nullPolylineCharArray);
+				this.Decode(nullPolylineString);
 			}
 
 			// Assert
@@ -41,11 +41,11 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		[TestMethod]
 		public void Decode_EmptyInput() {
 			// Arrange
-			var emptyPolylineCharArray = Defaults.Polyline.Empty.ToCharArray();
+			var emptyPolylineString = Defaults.Polyline.Empty;
 
 			// Act
 			void DecodeEmptyPolylineCharArray() {
-				PolylineAlgorithm.Decode(emptyPolylineCharArray);
+				this.Decode(emptyPolylineString);
 			}
 
 			// Assert
@@ -58,11 +58,11 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		[TestMethod]
 		public void Decode_InvalidInput() {
 			// Arrange
-			var invalidPolylineCharrArray = Defaults.Polyline.Invalid.ToCharArray();
+			var invalidPolylineString = Defaults.Polyline.Invalid;
 
 			// Act
 			void DecodeInvalidPolylineCharArray() {
-				PolylineAlgorithm.Decode(Defaults.Polyline.Invalid.ToCharArray());
+				this.Decode(Defaults.Polyline.Invalid);
 			}
 
 			// Assert
@@ -75,10 +75,10 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		[TestMethod]
 		public void Decode_ValidInput() {
 			// Arrange
-			var validPolylineCharArray = Defaults.Polyline.Valid.ToCharArray();
+			var validPolylineString = Defaults.Polyline.Valid;
 
 			// Act
-			var result = PolylineAlgorithm.Decode(validPolylineCharArray);
+			var result = this.Decode(validPolylineString);
 
 			// Assert
 			CollectionAssert.AreEquivalent(Defaults.Coordinate.Valid.ToList(), result.ToList());
@@ -94,7 +94,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 			// Act
 			void EncodeNullCoordinates() {
-				PolylineAlgorithm.Encode(nullCoordinates);
+				this.Encode(nullCoordinates);
 			}
 
 			// Assert
@@ -111,7 +111,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 			// Act
 			void EncodeEmptyCoordinates() {
-				PolylineAlgorithm.Encode(emptyCoordinates);
+				this.Encode(emptyCoordinates);
 			}
 
 			// Assert
@@ -128,7 +128,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 			// Act
 			void EncodeInvalidCoordinates() {
-				PolylineAlgorithm.Encode(invalidCoordinates);
+				this.Encode(invalidCoordinates);
 			}
 
 			// Assert
@@ -144,11 +144,34 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 			var validCoordinates = Defaults.Coordinate.Valid;
 
 			// Act
-			var result = PolylineAlgorithm.Encode(validCoordinates);
+			var result = this.Encode(validCoordinates);
 
 			// Assert
 			Assert.AreEqual(Defaults.Polyline.Valid, result);
 		}
+
+		#region Overriden methods
+
+		/// <summary>
+		/// The CreateResult
+		/// </summary>
+		/// <param name="latitude">The <see cref="double"/></param>
+		/// <param name="longitude">The <see cref="double"/></param>
+		/// <returns>The <see cref="(double latitude, double longitude)"/></returns>
+		protected override (double latitude, double longitude) CreateResult(double latitude, double longitude) {
+			return (latitude, longitude);
+		}
+
+		/// <summary>
+		/// The GetCoordinate
+		/// </summary>
+		/// <param name="source">The <see cref="(double latitude, double longitude)"/></param>
+		/// <returns>The <see cref="(double Latitude, double Longitude)"/></returns>
+		protected override (double Latitude, double Longitude) GetCoordinate((double latitude, double longitude) source) {
+			return source;
+		}
+
+		#endregion
 
 		#endregion
 	}
