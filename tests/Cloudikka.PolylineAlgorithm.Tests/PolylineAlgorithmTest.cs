@@ -22,7 +22,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_NullInput
 		/// </summary>
 		[TestMethod]
-		public void Decode_NullInput() {
+		public void Decode_NullInput_ThrowsException() {
 			// Arrange
 			var nullPolylineCharArray = (char[])null;
 
@@ -39,7 +39,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		public void Decode_EmptyInput() {
+		public void Decode_EmptyInput_ThrowsException() {
 			// Arrange
 			var emptyPolylineCharArray = Defaults.Polyline.Empty.ToCharArray();
 
@@ -56,7 +56,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		public void Decode_InvalidInput() {
+		public void Decode_InvalidInput_ThrowsException() {
 			// Arrange
 			var invalidPolylineCharrArray = Defaults.Polyline.Invalid.ToCharArray();
 
@@ -73,7 +73,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Decode_ValidInput
 		/// </summary>
 		[TestMethod]
-		public void Decode_ValidInput() {
+		public void Decode_ValidInput_AreEquivalent() {
 			// Arrange
 			var validPolylineCharArray = Defaults.Polyline.Valid.ToCharArray();
 
@@ -88,7 +88,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_NullInput
 		/// </summary>
 		[TestMethod]
-		public void Encode_NullInput() {
+		public void Encode_NullInput_ThrowsException() {
 			// Arrange
 			var nullCoordinates = (IEnumerable<(double, double)>)null;
 
@@ -105,7 +105,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_EmptyInput
 		/// </summary>
 		[TestMethod]
-		public void Encode_EmptyInput() {
+		public void Encode_EmptyInput_ThrowsException() {
 			// Arrange
 			var emptyCoordinates = Defaults.Coordinate.Empty;
 
@@ -122,7 +122,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_InvalidInput
 		/// </summary>
 		[TestMethod]
-		public void Encode_InvalidInput() {
+		public void Encode_InvalidInput_ThrowsException() {
 			// Arrange
 			var invalidCoordinates = Defaults.Coordinate.Invalid;
 
@@ -139,7 +139,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		/// The Encode_ValidInput
 		/// </summary>
 		[TestMethod]
-		public void Encode_ValidInput() {
+		public void Encode_ValidInput_AreEqual() {
 			// Arrange
 			var validCoordinates = Defaults.Coordinate.Valid;
 

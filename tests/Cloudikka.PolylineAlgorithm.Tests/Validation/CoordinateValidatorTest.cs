@@ -19,10 +19,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValid_InvalidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValid_InvalidInput() {
-			foreach (var item in Defaults.Coordinate.Invalid) {
+		public void IsValid_InvalidInput_IsFalse() {
+			// Act
+			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+
+			foreach (var item in invalidCoordinateCollection) {
+				// Arrange
 				var result = CoordinateValidator.IsValid(item);
 
+				// Assert
 				Assert.IsFalse(result);
 			}
 		}
@@ -31,10 +36,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValid_ValidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValid_ValidInput() {
-			foreach (var item in Defaults.Coordinate.Valid) {
+		public void IsValid_ValidInput_IsTrue() {
+			// Act
+			var validCoordinateCollection = Defaults.Coordinate.Valid;
+
+			foreach (var item in validCoordinateCollection) {
+				// Arrange
 				var result = CoordinateValidator.IsValid(item);
 
+				// Assert
 				Assert.IsTrue(result);
 			}
 		}
@@ -43,10 +53,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValidLatitude_InvalidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValidLatitude_InvalidInput() {
-			foreach (var item in Defaults.Coordinate.Invalid) {
+		public void IsValidLatitude_InvalidInput_IsFalse() {
+			// Act
+			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+
+			foreach (var item in invalidCoordinateCollection) {
+				// Act
 				var result = CoordinateValidator.IsValidLatitude(item.Latitude);
 
+				// Arrange
 				Assert.IsFalse(result);
 			}
 		}
@@ -55,10 +70,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValidLatitude_ValidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValidLatitude_ValidInput() {
-			foreach (var item in Defaults.Coordinate.Valid) {
-				var result = CoordinateValidator.IsValidLatitude(item.Latitude);
+		public void IsValidLatitude_ValidInput_IsTrue() {
+			// Arrange
+			var validCoordinateCollection = Defaults.Coordinate.Valid;
 
+			foreach ((double Latitude, double Longitude) in validCoordinateCollection) {
+				// Act
+				var result = CoordinateValidator.IsValidLatitude(Latitude);
+
+				// Assert
 				Assert.IsTrue(result);
 			}
 		}
@@ -67,10 +87,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValidLongitude_InvalidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValidLongitude_InvalidInput() {
-			foreach (var item in Defaults.Coordinate.Invalid) {
+		public void IsValidLongitude_InvalidInput_IsFalse() {
+			// Arrange
+			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+
+			foreach (var item in invalidCoordinateCollection) {
+				// Act
 				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
+				// Assert
 				Assert.IsFalse(result);
 			}
 		}
@@ -79,10 +104,15 @@ namespace Cloudikka.PolylineAlgorithm.Tests.Validation {
 		/// The IsValidLongitude_ValidInput
 		/// </summary>
 		[TestMethod]
-		public void IsValidLongitude_ValidInput() {
-			foreach (var item in Defaults.Coordinate.Valid) {
+		public void IsValidLongitude_ValidInput_IsTrue() {
+			// Arrange
+			var validCoordinateCollection = Defaults.Coordinate.Valid;
+
+			foreach (var item in validCoordinateCollection) {
+				// Act
 				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
+				// Assert
 				Assert.IsTrue(result);
 			}
 		}
