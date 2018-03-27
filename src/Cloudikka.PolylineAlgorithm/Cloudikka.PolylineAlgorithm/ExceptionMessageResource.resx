@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SourceCharArrayCannotBeNullOrEmpty" xml:space="preserve">
-    <value>Source char array argument cannot be null -or- empty</value>
+  <data name="AggregateExceptionCoordinatesAreInvalidErrorMessage" xml:space="preserve">
+    <value>One or more coordinates are invalid. Check InnerExceptions property for details.</value>
   </data>
-  <data name="SourceCoordinatesAreInvalid" xml:space="preserve">
-    <value>Source coordinates argument is invalid</value>
+  <data name="ArgumentCannotBeNullOrEmpty" xml:space="preserve">
+    <value>Argument cannot be null -or- empty char array.</value>
   </data>
-  <data name="SourcePolylineStringCannotBeNullOrEmpty" xml:space="preserve">
-    <value>Source polyline argument cannot be null -or- empty</value>
+  <data name="ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat" xml:space="preserve">
+    <value>Latitude: {0}, Longitude: {1}) is invalid. Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180.</value>
   </data>
-  <data name="SourcePolylineStringIsMalformed" xml:space="preserve">
-    <value>Source polyline argument is malformed</value>
+  <data name="PolylineCharArrayIsMalformed" xml:space="preserve">
+    <value>Polyline is malformed.</value>
   </data>
 </root>
