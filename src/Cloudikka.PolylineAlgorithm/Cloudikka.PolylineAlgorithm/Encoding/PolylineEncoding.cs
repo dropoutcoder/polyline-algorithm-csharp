@@ -4,62 +4,30 @@
 //
 
 namespace Cloudikka.PolylineAlgorithm.Encoding {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-
 	/// <summary>
-	/// Defines the <see cref="PolylineEncoding{T}" />
+	/// Defines default polyline encoding with generic <see cref="System.ValueTuple[double, double]"/> 
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	public abstract class PolylineEncoding<T> : IPolylineEncoding<T> {
+	public class PolylineEncoding : PolylineEncodingBase<(double Latitude, double Longitude)> {
 		#region Methods
 
 		/// <summary>
-		/// The Decode
+		/// Method creates <see cref="System.ValueTuple[double, double]"/> result from passed latitude and longitude arguments
 		/// </summary>
-		/// <param name="source">The <see cref="string"/></param>
-		/// <returns>The <see cref="IEnumerable{T}"/></returns>
-		public IEnumerable<T> Decode(string source) {
-			if (String.IsNullOrEmpty(source)) {
-				throw new ArgumentException(ExceptionMessageResource.SourcePolylineStringCannotBeNullOrEmpty, nameof(source));
-			}
-
-			char[] polyline = source.ToCharArray();
-
-			return PolylineAlgorithm.Decode(polyline)
-				.Select(c => CreateResult(c.Latitude, c.Longitude));
+		/// <param name="latitude">Latitude value</param>
+		/// <param name="longitude">Longitude value</param>
+		/// <returns>Returns created instance of <see cref="System.ValueTuple[double, double]"/></returns>
+		protected override (double Latitude, double Longitude) CreateResult(double latitude, double longitude) {
+			return (latitude, longitude);
 		}
 
 		/// <summary>
-		/// The Encode
+		/// Method creates <see cref="System.ValueTuple[double, double]"/>
 		/// </summary>
-		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
-		/// <returns>The <see cref="string"/></returns>
-		public string Encode(IEnumerable<T> source) {
-			if (source == null || !source.Any()) {
-				throw new ArgumentException(ExceptionMessageResource.SourceCharArrayCannotBeNullOrEmpty, nameof(source));
-			}
-
-			var coordinates = source.Select(s => GetCoordinate(s));
-
-			return PolylineAlgorithm.Encode(coordinates);
+		/// <param name="source">The <see cref="(double Latitude, double Longitude)"/></param>
+		/// <returns>Returns created coordinate <see cref="System.ValueTuple[double, double]"/></returns>
+		protected override (double Latitude, double Longitude) GetCoordinate((double Latitude, double Longitude) source) {
+			return source;
 		}
-
-		/// <summary>
-		/// The CreateResult
-		/// </summary>
-		/// <param name="latitude">The <see cref="double"/></param>
-		/// <param name="longitude">The <see cref="double"/></param>
-		/// <returns>The <see cref="T"/></returns>
-		protected abstract T CreateResult(double latitude, double longitude);
-
-		/// <summary>
-		/// The GetCoordinates
-		/// </summary>
-		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
-		/// <returns>The <see cref="IEnumerable{(double Latitude, double Longitude)}"/></returns>
-		protected abstract (double Latitude, double Longitude) GetCoordinate(T source);
 
 		#endregion
 	}

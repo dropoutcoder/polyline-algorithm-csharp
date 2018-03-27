@@ -5,9 +5,9 @@
 
 namespace Cloudikka.PolylineAlgorithm {
 	/// <summary>
-	/// Defines the <see cref="Constants" />
+	/// Defines global constant values
 	/// </summary>
-	public static class Constants {
+	internal static class Constants {
 		#region Constants
 
 		/// <summary>
@@ -23,13 +23,13 @@ namespace Cloudikka.PolylineAlgorithm {
 		#endregion
 
 		/// <summary>
-		/// Defines the <see cref="ASCII" />
+		/// Defines ASCII characters constant values
 		/// </summary>
-		public static class ASCII {
+		internal static class ASCII {
 			#region Constants
 
 			/// <summary>
-			/// Defines the ASCII QuestionMark
+			/// Defines the ASCII Question Mark
 			/// </summary>
 			public const int QuestionMark = 63;
 
@@ -39,7 +39,7 @@ namespace Cloudikka.PolylineAlgorithm {
 			public const int Space = 32;
 
 			/// <summary>
-			/// Defines the ASCII UnitSeparator
+			/// Defines the ASCII Unit Separator
 			/// </summary>
 			public const int UnitSeparator = 31;
 
@@ -47,13 +47,13 @@ namespace Cloudikka.PolylineAlgorithm {
 		}
 
 		/// <summary>
-		/// Defines the <see cref="Coordinate" />
+		/// Defines coordinates constant values
 		/// </summary>
-		public static class Coordinate {
+		internal static class Coordinate {
 			#region Constants
 
 			/// <summary>
-			/// Defines the maximum value for Latitude
+			/// Defines the maximum value for latitude
 			/// </summary>
 			public const int MaxLatitude = 90;
 
