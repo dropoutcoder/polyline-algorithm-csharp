@@ -1,2 +1,24 @@
 {
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": ".."
+        }
+      ],
+      "dest": "docs"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "docs/*.yml" ]
+      }
+    ],
+    "dest": "docs"
+  }
 }
