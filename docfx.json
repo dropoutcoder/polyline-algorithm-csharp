@@ -16,9 +16,8 @@
   "build": {
     "content": [
       {
-        "files": [ "docs/*.yml" ]
+        "files": [ "docs/*.yml", "docs/*.md" ]
       }
-    ],
-    "dest": "docs"
+    ]
   }
 }
