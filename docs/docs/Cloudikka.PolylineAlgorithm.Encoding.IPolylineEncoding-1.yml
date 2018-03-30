@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  id: IPolylineEncoding`1
+  parent: Cloudikka.PolylineAlgorithm.Encoding
+  children:
+  - Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode(System.String)
+  - Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  langs:
+  - csharp
+  - vb
+  name: IPolylineEncoding<T>
+  nameWithType: IPolylineEncoding<T>
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>
+  type: Interface
+  source:
+    remote:
+      path: src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: IPolylineEncoding
+    path: ../src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+    startLine: 14
+  assemblies:
+  - Cloudikka.PolylineAlgorithm
+  namespace: Cloudikka.PolylineAlgorithm.Encoding
+  summary: "\nDefines base interface for all polyline encodings\n"
+  example: []
+  syntax:
+    content: public interface IPolylineEncoding<T>
+    typeParameters:
+    - id: T
+      description: Desired type used to decode to and encode from
+    content.vb: Public Interface IPolylineEncoding(Of T)
+  nameWithType.vb: IPolylineEncoding(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T)
+  name.vb: IPolylineEncoding(Of T)
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode(System.String)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode(System.String)
+  id: Decode(System.String)
+  parent: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  langs:
+  - csharp
+  - vb
+  name: Decode(String)
+  nameWithType: IPolylineEncoding<T>.Decode(String)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>.Decode(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Decode
+    path: ../src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+    startLine: 22
+  assemblies:
+  - Cloudikka.PolylineAlgorithm
+  namespace: Cloudikka.PolylineAlgorithm.Encoding
+  summary: "\nMethod performs decoding from polyline encoded <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> to <xref href=\"System.Collections.Generic.IEnumerable%601\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: IEnumerable<T> Decode(string source)
+    parameters:
+    - id: source
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref> as polyline encoded source
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function Decode(source As String) As IEnumerable(Of T)
+  overload: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode*
+  nameWithType.vb: IPolylineEncoding(Of T).Decode(String)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T).Decode(System.String)
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  id: Encode(System.Collections.Generic.IEnumerable{`0})
+  parent: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  langs:
+  - csharp
+  - vb
+  name: Encode(IEnumerable<T>)
+  nameWithType: IPolylineEncoding<T>.Encode(IEnumerable<T>)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>.Encode(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Encode
+    path: ../src/Cloudikka.PolylineAlgorithm/Cloudikka.PolylineAlgorithm/Encoding/IPolylineEncoding.cs
+    startLine: 29
+  assemblies:
+  - Cloudikka.PolylineAlgorithm
+  namespace: Cloudikka.PolylineAlgorithm.Encoding
+  summary: "\nMethod performs encoding from generic type to polyline encoded <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: string Encode(IEnumerable<T> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: Coordinates to encode
+    return:
+      type: System.String
+      description: Polyline encoded result
+    content.vb: Function Encode(source As IEnumerable(Of T)) As String
+  overload: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode*
+  nameWithType.vb: IPolylineEncoding(Of T).Encode(IEnumerable(Of T))
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T).Encode(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: Encode(IEnumerable(Of T))
+references:
+- uid: Cloudikka.PolylineAlgorithm.Encoding
+  commentId: N:Cloudikka.PolylineAlgorithm.Encoding
+  isExternal: false
+  name: Cloudikka.PolylineAlgorithm.Encoding
+  nameWithType: Cloudikka.PolylineAlgorithm.Encoding
+  fullName: Cloudikka.PolylineAlgorithm.Encoding
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Decode
+  isExternal: false
+  name: Decode
+  nameWithType: IPolylineEncoding<T>.Decode
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>.Decode
+  nameWithType.vb: IPolylineEncoding(Of T).Decode
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T).Decode
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1.Encode
+  isExternal: false
+  name: Encode
+  nameWithType: IPolylineEncoding<T>.Encode
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>.Encode
+  nameWithType.vb: IPolylineEncoding(Of T).Encode
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T).Encode

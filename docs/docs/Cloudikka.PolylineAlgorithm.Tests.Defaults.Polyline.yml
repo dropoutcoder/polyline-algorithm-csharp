@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  id: Defaults.Polyline
+  parent: Cloudikka.PolylineAlgorithm.Tests
+  children:
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Empty
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Invalid
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Valid
+  langs:
+  - csharp
+  - vb
+  name: Defaults.Polyline
+  nameWithType: Defaults.Polyline
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  type: Class
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Polyline
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+    startLine: 51
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nDefines the <xref href=\"Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public static class Polyline
+    content.vb: Public Module Polyline
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Empty
+  commentId: F:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Empty
+  id: Empty
+  parent: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Defaults.Polyline.Empty
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Empty
+  type: Field
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Empty
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+    startLine: 57
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nDefines empty string of polyline encoded coordinates\n"
+  example: []
+  syntax:
+    content: public static readonly string Empty
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Empty As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Invalid
+  commentId: F:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Invalid
+  id: Invalid
+  parent: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  langs:
+  - csharp
+  - vb
+  name: Invalid
+  nameWithType: Defaults.Polyline.Invalid
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Invalid
+  type: Field
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Invalid
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+    startLine: 62
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nDefines polyline encoded range of invalid coordinates\n"
+  example: []
+  syntax:
+    content: public static readonly string Invalid
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Invalid As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Valid
+  commentId: F:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Valid
+  id: Valid
+  parent: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  langs:
+  - csharp
+  - vb
+  name: Valid
+  nameWithType: Defaults.Polyline.Valid
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.Valid
+  type: Field
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Valid
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Defaults.cs
+    startLine: 67
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nDefines polyline encoded range of valid coordinates\n"
+  example: []
+  syntax:
+    content: public static readonly string Valid
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Valid As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  isExternal: false
+  name: Defaults.Polyline
+  nameWithType: Defaults.Polyline
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+- uid: Cloudikka.PolylineAlgorithm.Tests
+  commentId: N:Cloudikka.PolylineAlgorithm.Tests
+  isExternal: false
+  name: Cloudikka.PolylineAlgorithm.Tests
+  nameWithType: Cloudikka.PolylineAlgorithm.Tests
+  fullName: Cloudikka.PolylineAlgorithm.Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

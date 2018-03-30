@@ -1,0 +1,269 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/1/s/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding-1.html",
+          "hash": "7kw2xb4t8ihT//XtWR2Rug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.html",
+          "hash": "8KzWm34YwWN//reMksNkvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase-1.html",
+          "hash": "uy8oDa9aXrbFlhkRvTQEvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Encoding.html",
+          "hash": "oKdd9m2Ma4fgistSoFf1KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.PolylineAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.PolylineAlgorithm.html",
+          "hash": "OlqrhFsJBOnGronXyOo7xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate.html",
+          "hash": "ww1WOhMNnZbPVwpiqZg6vA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline.html",
+          "hash": "fxffbkao85ls3BbODtoSAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Defaults.html",
+          "hash": "Zb1elTK73OtSa43n3k3HKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest.html",
+          "hash": "6jGuACAjSyBn+sLdrWc2iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.html",
+          "hash": "+mGLfvo5Xj0TCQAZiiN6Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Encoding.html",
+          "hash": "Oq6je3a7Tdu46LLZOWFsGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.html",
+          "hash": "sPv4yz/o0PC1/0HqyInJfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Validation.CoordinateValidatorTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Validation.CoordinateValidatorTest.html",
+          "hash": "MEqffzgD4moV2THxNcyBwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.Validation.html",
+          "hash": "c5BZmJBzRTNAmp8RTmzWbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Tests.html",
+          "hash": "cdHn4tKrJcpVofOzC8CHRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Validation.CoordinateValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Validation.CoordinateValidator.html",
+          "hash": "QhjcETQV2f0J4DEOTYYW7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.Validation.html",
+          "hash": "poZx16/nAc8ylaiRSTKgJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Cloudikka.PolylineAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Cloudikka.PolylineAlgorithm.html",
+          "hash": "0AvYFIE78bdH8H7rHndnLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html",
+          "hash": "iO9lefQLJANifANqhHATgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

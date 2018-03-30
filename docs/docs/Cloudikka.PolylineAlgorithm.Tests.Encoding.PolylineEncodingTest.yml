@@ -1,0 +1,1129 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  id: PolylineEncodingTest
+  parent: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  children:
+  - Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual
+  - Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual
+  langs:
+  - csharp
+  - vb
+  name: PolylineEncodingTest
+  nameWithType: PolylineEncodingTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  type: Class
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: PolylineEncodingTest
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+    startLine: 13
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  summary: "\nDefines the <xref href=\"Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      [TestCategory("PolylineEncoding")]
+
+      public class PolylineEncodingTest : PolylineEncoding, IPolylineEncoding<>
+    content.vb: >-
+      <TestClass>
+
+      <TestCategory("PolylineEncoding")>
+
+      Public Class PolylineEncodingTest
+          Inherits PolylineEncoding
+          Implements IPolylineEncoding(Of )
+  inheritance:
+  - System.Object
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+  implements:
+  - Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding{System.ValueTuple{System.Double,System.Double}}
+  inheritedMembers:
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double,System.Double)
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Decode(System.String)
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Encode(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Double,System.Double}})
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.CreateResult(System.Double,System.Double)
+  - Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: PolylineEncoding
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual
+  id: CreateResult_AreEqual
+  parent: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  langs:
+  - csharp
+  - vb
+  name: CreateResult_AreEqual()
+  nameWithType: PolylineEncodingTest.CreateResult_AreEqual()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: CreateResult_AreEqual
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+    startLine: 21
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  summary: "\nThe CreateResult_AreEqual\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void CreateResult_AreEqual()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub CreateResult_AreEqual
+  overload: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual
+  id: GetCoordinate_AreEqual
+  parent: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  langs:
+  - csharp
+  - vb
+  name: GetCoordinate_AreEqual()
+  nameWithType: PolylineEncodingTest.GetCoordinate_AreEqual()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: GetCoordinate_AreEqual
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/Encoding/PolylineEncodingTest.cs
+    startLine: 36
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  summary: "\nThe GetCoordinate_AreEqual\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void GetCoordinate_AreEqual()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub GetCoordinate_AreEqual
+  overload: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  isExternal: false
+  name: PolylineEncodingTest
+  nameWithType: PolylineEncodingTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  commentId: N:Cloudikka.PolylineAlgorithm.Tests.Encoding
+  isExternal: false
+  name: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  nameWithType: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  parent: Cloudikka.PolylineAlgorithm.Encoding
+  definition: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+  name: PolylineEncodingBase<>
+  nameWithType: PolylineEncodingBase<>
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>
+  nameWithType.vb: PolylineEncodingBase(Of )
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.)
+  name.vb: PolylineEncodingBase(Of )
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+    name: PolylineEncodingBase
+    nameWithType: PolylineEncodingBase
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+    name: PolylineEncodingBase
+    nameWithType: PolylineEncodingBase
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+  parent: Cloudikka.PolylineAlgorithm.Encoding
+  isExternal: false
+  name: PolylineEncoding
+  nameWithType: PolylineEncoding
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding{System.ValueTuple{System.Double,System.Double}}
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding{System.ValueTuple{System.Double,System.Double}}
+  parent: Cloudikka.PolylineAlgorithm.Encoding
+  definition: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  name: IPolylineEncoding<>
+  nameWithType: IPolylineEncoding<>
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<System.>
+  nameWithType.vb: IPolylineEncoding(Of )
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of System.)
+  name.vb: IPolylineEncoding(Of )
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+    name: IPolylineEncoding
+    nameWithType: IPolylineEncoding
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+    name: IPolylineEncoding
+    nameWithType: IPolylineEncoding
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double,System.Double)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double,System.Double)
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+  isExternal: true
+  name: CreateResult(Double, Double)
+  nameWithType: PolylineEncoding.CreateResult(Double, Double)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double, System.Double)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncoding.CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncoding.CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding
+  isExternal: false
+  name: GetCoordinate()
+  nameWithType: PolylineEncoding.GetCoordinate()
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+    name: GetCoordinate
+    nameWithType: PolylineEncoding.GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+    name: GetCoordinate
+    nameWithType: PolylineEncoding.GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Decode(System.String)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Decode(System.String)
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  definition: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+  name: Decode(String)
+  nameWithType: PolylineEncodingBase<>.Decode(String)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.Decode(System.String)
+  nameWithType.vb: PolylineEncodingBase(Of ).Decode(String)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).Decode(System.String)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+    name: Decode
+    nameWithType: PolylineEncodingBase<>.Decode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+    name: Decode
+    nameWithType: PolylineEncodingBase(Of ).Decode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Encode(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Double,System.Double}})
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.Encode(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Double,System.Double}})
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  definition: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  name: Encode(IEnumerable<>)
+  nameWithType: PolylineEncodingBase<>.Encode(IEnumerable<>)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.Encode(System.Collections.Generic.IEnumerable<System.>)
+  nameWithType.vb: PolylineEncodingBase(Of ).Encode(IEnumerable(Of ))
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).Encode(System.Collections.Generic.IEnumerable(Of System.))
+  name.vb: Encode(IEnumerable(Of ))
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+    name: Encode
+    nameWithType: PolylineEncodingBase<>.Encode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+    name: Encode
+    nameWithType: PolylineEncodingBase(Of ).Encode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.CreateResult(System.Double,System.Double)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.CreateResult(System.Double,System.Double)
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  definition: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+  name: CreateResult(Double, Double)
+  nameWithType: PolylineEncodingBase<>.CreateResult(Double, Double)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.CreateResult(System.Double, System.Double)
+  nameWithType.vb: PolylineEncodingBase(Of ).CreateResult(Double, Double)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).CreateResult(System.Double, System.Double)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncodingBase<>.CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncodingBase(Of ).CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}.GetCoordinate(System.ValueTuple{System.Double,System.Double})
+  parent: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase{System.ValueTuple{System.Double,System.Double}}
+  definition: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+  name: GetCoordinate()
+  nameWithType: PolylineEncodingBase<>.GetCoordinate()
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.GetCoordinate(System.)
+  nameWithType.vb: PolylineEncodingBase(Of ).GetCoordinate()
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).GetCoordinate(System.)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+    name: GetCoordinate
+    nameWithType: PolylineEncodingBase<>.GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<System.>.GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+    name: GetCoordinate
+    nameWithType: PolylineEncodingBase(Of ).GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of System.).GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ValueTuple{System.Double,System.Double}
+    name: ''
+    nameWithType: ''
+    fullName: System.
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+  isExternal: false
+  name: PolylineEncodingBase<T>
+  nameWithType: PolylineEncodingBase<T>
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>
+  nameWithType.vb: PolylineEncodingBase(Of T)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T)
+  name.vb: PolylineEncodingBase(Of T)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+    name: PolylineEncodingBase
+    nameWithType: PolylineEncodingBase
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1
+    name: PolylineEncodingBase
+    nameWithType: PolylineEncodingBase
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding
+  commentId: N:Cloudikka.PolylineAlgorithm.Encoding
+  isExternal: false
+  name: Cloudikka.PolylineAlgorithm.Encoding
+  nameWithType: Cloudikka.PolylineAlgorithm.Encoding
+  fullName: Cloudikka.PolylineAlgorithm.Encoding
+- uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  commentId: T:Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+  isExternal: false
+  name: IPolylineEncoding<T>
+  nameWithType: IPolylineEncoding<T>
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding<T>
+  nameWithType.vb: IPolylineEncoding(Of T)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding(Of T)
+  name.vb: IPolylineEncoding(Of T)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+    name: IPolylineEncoding
+    nameWithType: IPolylineEncoding
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding`1
+    name: IPolylineEncoding
+    nameWithType: IPolylineEncoding
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+  isExternal: true
+  name: Decode(String)
+  nameWithType: PolylineEncodingBase<T>.Decode(String)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.Decode(System.String)
+  nameWithType.vb: PolylineEncodingBase(Of T).Decode(String)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).Decode(System.String)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+    name: Decode
+    nameWithType: PolylineEncodingBase<T>.Decode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Decode(System.String)
+    name: Decode
+    nameWithType: PolylineEncodingBase(Of T).Decode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).Decode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+  isExternal: true
+  name: Encode(IEnumerable<T>)
+  nameWithType: PolylineEncodingBase<T>.Encode(IEnumerable<T>)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.Encode(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: PolylineEncodingBase(Of T).Encode(IEnumerable(Of T))
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).Encode(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: Encode(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+    name: Encode
+    nameWithType: PolylineEncodingBase<T>.Encode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.Encode(System.Collections.Generic.IEnumerable{`0})
+    name: Encode
+    nameWithType: PolylineEncodingBase(Of T).Encode
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).Encode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+  isExternal: true
+  name: CreateResult(Double, Double)
+  nameWithType: PolylineEncodingBase<T>.CreateResult(Double, Double)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.CreateResult(System.Double, System.Double)
+  nameWithType.vb: PolylineEncodingBase(Of T).CreateResult(Double, Double)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).CreateResult(System.Double, System.Double)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncodingBase<T>.CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.CreateResult(System.Double,System.Double)
+    name: CreateResult
+    nameWithType: PolylineEncodingBase(Of T).CreateResult
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).CreateResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+  commentId: M:Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+  isExternal: false
+  name: GetCoordinate(T)
+  nameWithType: PolylineEncodingBase<T>.GetCoordinate(T)
+  fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.GetCoordinate(T)
+  nameWithType.vb: PolylineEncodingBase(Of T).GetCoordinate(T)
+  fullName.vb: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).GetCoordinate(T)
+  spec.csharp:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+    name: GetCoordinate
+    nameWithType: PolylineEncodingBase<T>.GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase<T>.GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase`1.GetCoordinate(`0)
+    name: GetCoordinate
+    nameWithType: PolylineEncodingBase(Of T).GetCoordinate
+    fullName: Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase(Of T).GetCoordinate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual
+  isExternal: false
+  name: CreateResult_AreEqual
+  nameWithType: PolylineEncodingTest.CreateResult_AreEqual
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.CreateResult_AreEqual
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual
+  isExternal: false
+  name: GetCoordinate_AreEqual
+  nameWithType: PolylineEncodingTest.GetCoordinate_AreEqual
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest.GetCoordinate_AreEqual

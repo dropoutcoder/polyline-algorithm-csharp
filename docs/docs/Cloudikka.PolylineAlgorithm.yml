@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm
+  commentId: N:Cloudikka.PolylineAlgorithm
+  id: Cloudikka.PolylineAlgorithm
+  children:
+  - Cloudikka.PolylineAlgorithm.PolylineAlgorithm
+  langs:
+  - csharp
+  - vb
+  name: Cloudikka.PolylineAlgorithm
+  nameWithType: Cloudikka.PolylineAlgorithm
+  fullName: Cloudikka.PolylineAlgorithm
+  type: Namespace
+  assemblies:
+  - Cloudikka.PolylineAlgorithm
+references:
+- uid: Cloudikka.PolylineAlgorithm.PolylineAlgorithm
+  commentId: T:Cloudikka.PolylineAlgorithm.PolylineAlgorithm
+  isExternal: false
+  name: PolylineAlgorithm
+  nameWithType: PolylineAlgorithm
+  fullName: Cloudikka.PolylineAlgorithm.PolylineAlgorithm

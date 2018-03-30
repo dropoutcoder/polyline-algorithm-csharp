@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  commentId: N:Cloudikka.PolylineAlgorithm.Tests.Encoding
+  id: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  children:
+  - Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest
+  - Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  langs:
+  - csharp
+  - vb
+  name: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  nameWithType: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding
+  type: Namespace
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+references:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest
+  isExternal: false
+  name: PolylineEncodingBaseTest
+  nameWithType: PolylineEncodingBaseTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingBaseTest
+- uid: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest
+  isExternal: false
+  name: PolylineEncodingTest
+  nameWithType: PolylineEncodingTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Encoding.PolylineEncodingTest

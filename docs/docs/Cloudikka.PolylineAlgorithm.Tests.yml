@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Tests
+  commentId: N:Cloudikka.PolylineAlgorithm.Tests
+  id: Cloudikka.PolylineAlgorithm.Tests
+  children:
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate
+  - Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Cloudikka.PolylineAlgorithm.Tests
+  nameWithType: Cloudikka.PolylineAlgorithm.Tests
+  fullName: Cloudikka.PolylineAlgorithm.Tests
+  type: Namespace
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+references:
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Defaults
+  isExternal: false
+  name: Defaults
+  nameWithType: Defaults
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate
+  isExternal: false
+  name: Defaults.Coordinate
+  nameWithType: Defaults.Coordinate
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Coordinate
+- uid: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+  isExternal: false
+  name: Defaults.Polyline
+  nameWithType: Defaults.Polyline
+  fullName: Cloudikka.PolylineAlgorithm.Tests.Defaults.Polyline
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  isExternal: false
+  name: PolylineAlgorithmTest
+  nameWithType: PolylineAlgorithmTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest

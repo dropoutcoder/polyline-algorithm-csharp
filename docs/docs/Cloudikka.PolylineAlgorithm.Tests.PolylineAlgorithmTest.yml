@@ -1,0 +1,762 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  id: PolylineAlgorithmTest
+  parent: Cloudikka.PolylineAlgorithm.Tests
+  children:
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+  - Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual
+  langs:
+  - csharp
+  - vb
+  name: PolylineAlgorithmTest
+  nameWithType: PolylineAlgorithmTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  type: Class
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: PolylineAlgorithmTest
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 15
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nDefines the <xref href=\"Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      [TestCategory("PolylineAlgorithm")]
+
+      public class PolylineAlgorithmTest
+    content.vb: >-
+      <TestClass>
+
+      <TestCategory("PolylineAlgorithm")>
+
+      Public Class PolylineAlgorithmTest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: PolylineAlgorithm
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+  id: Decode_NullInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Decode_NullInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Decode_NullInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Decode_NullInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 23
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Decode_NullInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Decode_NullInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Decode_NullInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+  id: Decode_EmptyInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Decode_EmptyInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Decode_EmptyInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 40
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Decode_EmptyInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Decode_EmptyInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Decode_EmptyInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+  id: Decode_InvalidInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Decode_InvalidInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Decode_InvalidInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 57
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Decode_InvalidInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Decode_InvalidInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Decode_InvalidInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+  id: Decode_ValidInput_AreEquivalent
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Decode_ValidInput_AreEquivalent()
+  nameWithType: PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Decode_ValidInput_AreEquivalent
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 74
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Decode_ValidInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Decode_ValidInput_AreEquivalent()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Decode_ValidInput_AreEquivalent
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+  id: Encode_NullInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Encode_NullInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Encode_NullInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Encode_NullInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 89
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Encode_NullInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Encode_NullInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Encode_NullInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+  id: Encode_EmptyInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Encode_EmptyInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Encode_EmptyInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 106
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Encode_EmptyInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Encode_EmptyInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Encode_EmptyInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+  id: Encode_InvalidInput_ThrowsException
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Encode_InvalidInput_ThrowsException()
+  nameWithType: PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Encode_InvalidInput_ThrowsException
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 123
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Encode_InvalidInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Encode_InvalidInput_ThrowsException()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Encode_InvalidInput_ThrowsException
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual
+  commentId: M:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual
+  id: Encode_ValidInput_AreEqual
+  parent: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  langs:
+  - csharp
+  - vb
+  name: Encode_ValidInput_AreEqual()
+  nameWithType: PolylineAlgorithmTest.Encode_ValidInput_AreEqual()
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual()
+  type: Method
+  source:
+    remote:
+      path: tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+      branch: alpha
+      repo: https://github.com/cloudikka/polyline-algorithm-csharp.git
+    id: Encode_ValidInput_AreEqual
+    path: ../tests/Cloudikka.PolylineAlgorithm.Tests/PolylineAlgorithmTest.cs
+    startLine: 140
+  assemblies:
+  - Cloudikka.PolylineAlgorithm.Tests
+  namespace: Cloudikka.PolylineAlgorithm.Tests
+  summary: "\nThe Encode_ValidInput\n"
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void Encode_ValidInput_AreEqual()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub Encode_ValidInput_AreEqual
+  overload: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  commentId: T:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+  isExternal: false
+  name: PolylineAlgorithmTest
+  nameWithType: PolylineAlgorithmTest
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest
+- uid: Cloudikka.PolylineAlgorithm.Tests
+  commentId: N:Cloudikka.PolylineAlgorithm.Tests
+  isExternal: false
+  name: Cloudikka.PolylineAlgorithm.Tests
+  nameWithType: Cloudikka.PolylineAlgorithm.Tests
+  fullName: Cloudikka.PolylineAlgorithm.Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+  isExternal: false
+  name: Decode_NullInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_NullInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+  isExternal: false
+  name: Decode_EmptyInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_EmptyInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+  isExternal: false
+  name: Decode_InvalidInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_InvalidInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+  isExternal: false
+  name: Decode_ValidInput_AreEquivalent
+  nameWithType: PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Decode_ValidInput_AreEquivalent
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+  isExternal: false
+  name: Encode_NullInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_NullInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+  isExternal: false
+  name: Encode_EmptyInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_EmptyInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+  isExternal: false
+  name: Encode_InvalidInput_ThrowsException
+  nameWithType: PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_InvalidInput_ThrowsException
+- uid: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual*
+  commentId: Overload:Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual
+  isExternal: false
+  name: Encode_ValidInput_AreEqual
+  nameWithType: PolylineAlgorithmTest.Encode_ValidInput_AreEqual
+  fullName: Cloudikka.PolylineAlgorithm.Tests.PolylineAlgorithmTest.Encode_ValidInput_AreEqual
