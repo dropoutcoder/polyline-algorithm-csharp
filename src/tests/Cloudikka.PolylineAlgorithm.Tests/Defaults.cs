@@ -9,22 +9,22 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 	using System.Linq;
 
 	/// <summary>
-	/// Defines the <see cref="Defaults" />
+	/// Defines default values and objects used for testing purposes
 	/// </summary>
 	public static class Defaults {
 		/// <summary>
-		/// Defines the <see cref="Coordinate" />
+		/// Defines default decoded values and objects udśed for testing purposes
 		/// </summary>
 		public static class Coordinate {
 			#region Fields
 
 			/// <summary>
-			/// Defines empty range of coordinates
+			/// Defines empty range of coordinates. Equals to decoded <seealso cref="Polyline.Empty"/>
 			/// </summary>
 			public static readonly IEnumerable<(double Latitude, double Longitude)> Empty = Enumerable.Empty<(double Latitude, double Longitude)>();
 
 			/// <summary>
-			/// Defines range of invalid coordinates
+			/// Defines range of invalid coordinates. Equals to decoded <seealso cref="Polyline.Invalid"/>
 			/// </summary>
 			public static readonly IEnumerable<(double Latitude, double Longitude)> Invalid = new[] {
 			(149.47383, 259.06250),
@@ -34,7 +34,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		};
 
 			/// <summary>
-			/// Defines range of valid coordinates
+			/// Defines range of valid coordinates. Equals to decoded <seealso cref="Polyline.Valid"/>
 			/// </summary>
 			public static readonly IEnumerable<(double Latitude, double Longitude)> Valid = new[] {
 			(49.47383, 59.06250),
@@ -47,23 +47,23 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// Defines the <see cref="Polyline" />
+		/// Defines default encoded values and objects udśed for testing purposes
 		/// </summary>
 		public static class Polyline {
 			#region Fields
 
 			/// <summary>
-			/// Defines empty string of polyline encoded coordinates
+			/// Defines empty string of polyline encoded coordinates. Equals to encoded <seealso cref="Coordinate.Empty"/>
 			/// </summary>
 			public static readonly string Empty = String.Empty;
 
 			/// <summary>
-			/// Defines polyline encoded range of invalid coordinates
+			/// Defines polyline encoded range of invalid coordinates. Equals to encoded <seealso cref="Coordinate.Invalid"/>
 			/// </summary>
 			public static readonly string Invalid = "mnc~Qsm_ja@";
 
 			/// <summary>
-			/// Defines polyline encoded range of valid coordinates
+			/// Defines polyline encoded range of valid coordinates. Equals to encoded <seealso cref="Coordinate.Valid"/>
 			/// </summary>
 			public static readonly string Valid = "mz}lHssngJj`gqSnx~lEcovfTnms{Zdy~qQj_deI";
 

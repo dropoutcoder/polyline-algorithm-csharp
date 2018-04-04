@@ -19,7 +19,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		#region Methods
 
 		/// <summary>
-		/// The Decode_NullInput
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="null" /> is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Decode_NullInput_ThrowsException() {
@@ -36,7 +37,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// The Decode_EmptyInput
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. Empty <see langword="char"/>[] is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Decode_EmptyInput_ThrowsException() {
@@ -53,7 +55,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// The Decode_InvalidInput
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="char"/>[] with invalid coordinates is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Decode_InvalidInput_ThrowsException() {
@@ -70,7 +73,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// The Decode_ValidInput
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="char"/>[] with valid coordinates is passed as parameter.
+		/// Expected result is <see cref="CollectionAssert.AreEquivalent(System.Collections.ICollection, System.Collections.ICollection)"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Decode_ValidInput_AreEquivalent() {
@@ -85,7 +89,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// The Encode_NullInput
+		/// Method is testing <see cref="PolylineAlgorithm.Encode(IEnumerable{(double Latitude, double Longitude)})" /> method. <see langword="null" /> is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Encode_NullInput_ThrowsException() {
@@ -102,7 +107,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// The Encode_EmptyInput
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. Empty is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>. 
 		/// </summary>
 		[TestMethod]
 		public void Encode_EmptyInput_ThrowsException() {

@@ -13,6 +13,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.33.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="ExceptionMessageResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
