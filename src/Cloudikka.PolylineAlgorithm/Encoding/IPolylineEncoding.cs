@@ -18,7 +18,7 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		/// <summary>
 		/// Method performs decoding from polyline encoded <see cref="System.String"/> to <see cref="IEnumerable{T}"/>
 		/// </summary>
-		/// <param name="source">The <see cref="string"/> as polyline encoded source</param>
+		/// <param name="source">The <see cref="System.String"/> as polyline encoded source</param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
 		IEnumerable<T> Decode(string source);
 

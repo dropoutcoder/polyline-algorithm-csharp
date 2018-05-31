@@ -5,7 +5,7 @@
 
 namespace Cloudikka.PolylineAlgorithm.Encoding {
 	/// <summary>
-	/// Defines default polyline encoding with generic <see cref="System.ValueTuple[double, double]"/> 
+	/// Defines default polyline encoding with generic <see cref="System.ValueTuple[double, double]"/>
 	/// </summary>
 	public class PolylineEncoding : PolylineEncodingBase<(double Latitude, double Longitude)> {
 		#region Methods

@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Encoding.IPolylineEncoding-1.html",
-          "hash": "WO6BHKtYLQKkW7xkV/jidA=="
+          "hash": "DqrnxKnqiqy11DiEltLb2g=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncoding.html",
-          "hash": "G9i9WlfqNKI19DixgWCdIA=="
+          "hash": "pO82v+JFwoDaviZBIpXX8Q=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Encoding.PolylineEncodingBase-1.html",
-          "hash": "JrGMhZyKx4GbvpikR1SJDg=="
+          "hash": "CFmggHvkqaoK8zNf2NzFhw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Encoding.html",
-          "hash": "hrusq2N0hj72XBy0XOR8Ug=="
+          "hash": "hmxQEbD7oEol2nRA2QASFg=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.PolylineAlgorithm.html",
-          "hash": "xI50/HxiRe8dJO7L7kFu4g=="
+          "hash": "p1O7tOQcXxB/dj1djHUuEQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Validation.CoordinateValidator.html",
-          "hash": "Fml+4OMQpm2jWM60kWM7UQ=="
+          "hash": "+IqFD/p1Zv5EDOw+yLtv7w=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.Validation.html",
-          "hash": "trBmT6LYYL48RiLEEvxetQ=="
+          "hash": "pj90bSc7Et36VX5VPIChKQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Cloudikka.PolylineAlgorithm.html",
-          "hash": "Xs1ARgZMpo7tmGSTYs35ew=="
+          "hash": "CcdrAzlXNq/NQ7r1yOFgGw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "JyXis7wxn0Dngl7wpPUbtQ=="
+          "hash": "S4zba4B3yamXPhJKPu6vxw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "5NkIhuysXQzwmOeNolqimA=="
+          "hash": "OXt/YOyOFNDL9GjfTh0wMA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "XQ+Exi1Li8nWthMCUEibXQ=="
+          "hash": "EbtbIhLFVNtrXGvEU2RurQ=="
         }
       },
       "is_incremental": false,
@@ -182,7 +182,7 @@
       "processors": {
         "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

@@ -7,7 +7,6 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-	using System.Linq.Expressions;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	/// <summary>
@@ -19,26 +18,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		#region Methods
 
 		/// <summary>
-		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="null" /> is passed as parameter.
-		/// Expected result is <see cref="ArgumentException"/>. 
-		/// </summary>
-		[TestMethod]
-		public void Decode_NullInput_ThrowsException() {
-			// Arrange
-			var nullPolylineCharArray = (char[])null;
-
-			// Act
-			void DecodeNullPolylineCharArray() {
-				PolylineAlgorithm.Decode(nullPolylineCharArray);
-			}
-
-			// Assert
-			Assert.ThrowsException<ArgumentException>(() => DecodeNullPolylineCharArray());
-		}
-
-		/// <summary>
 		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. Empty <see langword="char"/>[] is passed as parameter.
-		/// Expected result is <see cref="ArgumentException"/>. 
+		/// Expected result is <see cref="ArgumentException"/>.
 		/// </summary>
 		[TestMethod]
 		public void Decode_EmptyInput_ThrowsException() {
@@ -56,7 +37,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 		/// <summary>
 		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="char"/>[] with invalid coordinates is passed as parameter.
-		/// Expected result is <see cref="ArgumentException"/>. 
+		/// Expected result is <see cref="ArgumentException"/>.
 		/// </summary>
 		[TestMethod]
 		public void Decode_InvalidInput_ThrowsException() {
@@ -73,8 +54,26 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
+		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="null" /> is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>.
+		/// </summary>
+		[TestMethod]
+		public void Decode_NullInput_ThrowsException() {
+			// Arrange
+			var nullPolylineCharArray = (char[])null;
+
+			// Act
+			void DecodeNullPolylineCharArray() {
+				PolylineAlgorithm.Decode(nullPolylineCharArray);
+			}
+
+			// Assert
+			Assert.ThrowsException<ArgumentException>(() => DecodeNullPolylineCharArray());
+		}
+
+		/// <summary>
 		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. <see langword="char"/>[] with valid coordinates is passed as parameter.
-		/// Expected result is <see cref="CollectionAssert.AreEquivalent(System.Collections.ICollection, System.Collections.ICollection)"/>. 
+		/// Expected result is <see cref="CollectionAssert.AreEquivalent(System.Collections.ICollection, System.Collections.ICollection)"/>.
 		/// </summary>
 		[TestMethod]
 		public void Decode_ValidInput_AreEquivalent() {
@@ -89,26 +88,8 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 		}
 
 		/// <summary>
-		/// Method is testing <see cref="PolylineAlgorithm.Encode(IEnumerable{(double Latitude, double Longitude)})" /> method. <see langword="null" /> is passed as parameter.
-		/// Expected result is <see cref="ArgumentException"/>. 
-		/// </summary>
-		[TestMethod]
-		public void Encode_NullInput_ThrowsException() {
-			// Arrange
-			var nullCoordinates = (IEnumerable<(double, double)>)null;
-
-			// Act
-			void EncodeNullCoordinates() {
-				PolylineAlgorithm.Encode(nullCoordinates);
-			}
-
-			// Assert
-			Assert.ThrowsException<ArgumentException>(() => EncodeNullCoordinates());
-		}
-
-		/// <summary>
 		/// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. Empty is passed as parameter.
-		/// Expected result is <see cref="ArgumentException"/>. 
+		/// Expected result is <see cref="ArgumentException"/>.
 		/// </summary>
 		[TestMethod]
 		public void Encode_EmptyInput_ThrowsException() {
@@ -139,6 +120,24 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 			// Assert
 			Assert.ThrowsException<AggregateException>(() => EncodeInvalidCoordinates());
+		}
+
+		/// <summary>
+		/// Method is testing <see cref="PolylineAlgorithm.Encode(IEnumerable{(double Latitude, double Longitude)})" /> method. <see langword="null" /> is passed as parameter.
+		/// Expected result is <see cref="ArgumentException"/>.
+		/// </summary>
+		[TestMethod]
+		public void Encode_NullInput_ThrowsException() {
+			// Arrange
+			var nullCoordinates = (IEnumerable<(double, double)>)null;
+
+			// Act
+			void EncodeNullCoordinates() {
+				PolylineAlgorithm.Encode(nullCoordinates);
+			}
+
+			// Assert
+			Assert.ThrowsException<ArgumentException>(() => EncodeNullCoordinates());
 		}
 
 		/// <summary>

@@ -18,7 +18,7 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		/// <summary>
 		/// Method performs decode operation and coversion to desired type
 		/// </summary>
-		/// <param name="source">The <see cref="string"/></param>
+		/// <param name="source">The <see cref="String"/></param>
 		/// <returns>The <see cref="IEnumerable{T}"/></returns>
 		public IEnumerable<T> Decode(string source) {
 			if (String.IsNullOrEmpty(source)) {
@@ -35,7 +35,7 @@ namespace Cloudikka.PolylineAlgorithm.Encoding {
 		/// Method performs conversion to coordinate tuple and encode operation.
 		/// </summary>
 		/// <param name="source">The <see cref="IEnumerable{T}"/></param>
-		/// <returns>The <see cref="string"/></returns>
+		/// <returns>The <see cref="String"/></returns>
 		public string Encode(IEnumerable<T> source) {
 			if (source == null || !source.Any()) {
 				throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(source));
