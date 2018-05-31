@@ -105,3 +105,9 @@ There may be a scenario you need to pass and return different types to and from 
 	var encoding = new MyPolylineEncoding();
 	string polyline = encoding.Encode(coordinates);
 ```
+
+### Documentation
+
+Documentation is can be found at https://cloudikka.github.io/polyline-algorithm-csharp/api/index.html.
+
+Happy coding!
