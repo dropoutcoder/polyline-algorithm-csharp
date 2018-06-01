@@ -61,3 +61,10 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+# exclude docs and nuget folder from repository language detection
+###############################################################################
+
+docs/* linguist-vendored
+nuget/* linguist-vendored
