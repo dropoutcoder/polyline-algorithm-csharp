@@ -17,7 +17,7 @@ NuGet Package Manager:
 
 #### Warning
 
-Library is using <a href="https://msdn.microsoft.com/en-us/library/mt744804(v=vs.110).aspx">ValueTuple<T1, T2> Structure</a>. ValueTuple struct is avalable in .NET Framework 7.0 and above. Incase your project is targeting lower version of .NET Framework you probably have to install <a href="https://www.nuget.org/packages/System.ValueTuple/">System.ValueTuple</a> NuGet package. (not tested yet)
+Library is using <a href="https://msdn.microsoft.com/en-us/library/mt744804(v=vs.110).aspx">ValueTuple<T1, T2> Structure</a>. ValueTuple struct is avalable in .NET Framework 4.7 and above. Incase your project is targeting lower version of .NET Framework you probably have to install <a href="https://www.nuget.org/packages/System.ValueTuple/">System.ValueTuple</a> NuGet package. (not tested yet)
   
 Command line:
 
