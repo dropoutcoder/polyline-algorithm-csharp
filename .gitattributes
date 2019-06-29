@@ -63,8 +63,8 @@
 #*.RTF   diff=astextplain
 
 ###############################################################################
-# exclude docs and nuget folder from repository language detection
+# exclude files except those with cs file extension from repository language detection
 ###############################################################################
 
-docs/* linguist-vendored
-nuget/* linguist-vendored
+* linguist-vendored
+*.cs linguist-vendored=false
