@@ -46,7 +46,7 @@ namespace Cloudikka.PolylineAlgorithm.Tests {
 
 			// Act
 			void DecodeInvalidPolylineCharArray() {
-				PolylineAlgorithm.Decode(Defaults.Polyline.Invalid.ToCharArray());
+				PolylineAlgorithm.Decode(invalidPolylineCharrArray);
 			}
 
 			// Assert
