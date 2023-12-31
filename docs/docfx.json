@@ -17,15 +17,11 @@
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
           "**.yml",
           "index.md"
-        ]
+        ],
+        "src": "api",
+        "dest": "."
       }
     ],
     "resource": [
