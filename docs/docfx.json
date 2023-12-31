@@ -17,14 +17,14 @@
     "content": [
       {
         "files": [
-          "/source/api/**.yml",
-          "/source/api/index.md"
+          "source/api/**.yml",
+          "source/api/index.md"
         ]
       },
       {
         "files": [
-          "/source/articles/**.md",
-          "/source/articles/**/toc.yml",
+          "source/articles/**.md",
+          "source/articles/**/toc.yml",
           "toc.yml",
           "*.md"
         ]
