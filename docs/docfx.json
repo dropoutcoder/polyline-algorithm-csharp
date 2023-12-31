@@ -9,7 +9,7 @@
           "src": "../src/"
         }
       ],
-      "dest": "./docs/api",
+      "dest": "api",
       "disableGitFeatures": false
     }
   ],
@@ -17,16 +17,14 @@
     "content": [
       {
         "files": [
-          "source/api/**.yml",
-          "source/api/index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
       },
       {
         "files": [
-          "source/articles/**.md",
-          "source/articles/**/toc.yml",
-          "toc.yml",
-          "*.md"
+          "**.yml",
+          "index.md"
         ]
       }
     ],
