@@ -34,14 +34,14 @@ jobs:
       - name: docfx-action
         uses: nikeee/docfx-action@v1.0.0
         with:
-          path: '/docs/docfx.json'
+          path: '../docs/docfx.json'
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '/docs/_site'
+          path: '../docs/_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
