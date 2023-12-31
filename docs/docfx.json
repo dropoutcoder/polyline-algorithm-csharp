@@ -6,10 +6,10 @@
           "files": [
             "**.csproj"
           ],
-          "src": "..\\src\\"
+          "src": "./src/"
         }
       ],
-      "dest": "..\\docs\\api",
+      "dest": "./docs/api",
       "disableGitFeatures": false
     }
   ],
