@@ -36,15 +36,6 @@
         [ArgumentsSource(nameof(Coordinates))]
         public void Encode_V2_Parallel((int, IEnumerable<(double, double)>) arg) => Parallel.For(100, 200, (i) => V2.Encode(arg.Item2).Consume(_consumer));
 
-        [Benchmark]
-        [ArgumentsSource(nameof(Coordinates))]
-        public void Encode_V3((int, IEnumerable<(double, double)>) arg) => V3.Encode(arg.Item2).Consume(_consumer);
-
-
-        [Benchmark]
-        [ArgumentsSource(nameof(Coordinates))]
-        public void Encode_V3_Parallel((int, IEnumerable<(double, double)>) arg) => Parallel.For(100, 200, (i) => V3.Encode(arg.Item2).Consume(_consumer));
-
         private class V1
         {
             public static string Encode(IEnumerable<(double Latitude, double Longitude)> coordinates)
