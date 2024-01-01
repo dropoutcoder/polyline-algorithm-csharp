@@ -2,12 +2,12 @@
 {
     using BenchmarkDotNet.Attributes;
     using BenchmarkDotNet.Engines;
+    using System;
 
     [MemoryDiagnoser]
     public class DecodePerformanceBenchmark
     {
         private Consumer _consumer = new Consumer();
-
         public static IEnumerable<(int, char[])> Polylines()
         {
             yield return (1, "mz}lHssngJj`gqSnx~lEcovfTnms{Zdy~qQj_deI".ToCharArray());
@@ -21,15 +21,15 @@
 
         [Benchmark]
         [ArgumentsSource(nameof(Polylines))]
+        public void Decode_V1_Parallel((int, char[]) arg) => Parallel.For(0, 100, (i) => V1.Decode(arg.Item2).Consume(_consumer));
+
+        [Benchmark]
+        [ArgumentsSource(nameof(Polylines))]
         public void Decode_V2((int, char[]) arg) => V2.Decode(arg.Item2).Consume(_consumer);
 
         [Benchmark]
         [ArgumentsSource(nameof(Polylines))]
-        public void Decode_V1_Parallel((int, char[]) arg) => Parallel.For(100, 200, (i) => V1.Decode(arg.Item2).Consume(_consumer));
-
-        [Benchmark]
-        [ArgumentsSource(nameof(Polylines))]
-        public void Decode_V2_Parallel((int, char[]) arg) => Parallel.For(100, 200, (i) => V2.Decode(arg.Item2).Consume(_consumer));
+        public void Decode_V2_Parallel((int, char[]) arg) => Parallel.For(0, 100, (i) => V2.Decode(arg.Item2).Consume(_consumer));
 
         private class V1
         {
@@ -125,18 +125,18 @@
                     throw new ArgumentException(nameof(polyline));
                 }
 
-                int index = 0;
+                int offset = 0;
                 int latitude = 0;
                 int longitude = 0;
 
-                while (index < polyline.Length)
+                while (offset < polyline.Length)
                 {
-                    if (!TryCalculateNext(ref polyline, ref index, ref latitude))
+                    if (!TryCalculateNext(ref polyline, ref offset, ref latitude))
                     {
                         throw new InvalidOperationException();
                     }
 
-                    if (!TryCalculateNext(ref polyline, ref index, ref longitude))
+                    if (!TryCalculateNext(ref polyline, ref offset, ref longitude))
                     {
                         throw new InvalidOperationException();
                     }
@@ -152,7 +152,7 @@
                 }
             }
 
-            private static bool TryCalculateNext(ref char[] polyline, ref int index, ref int value)
+            private static bool TryCalculateNext(ref char[] polyline, ref int offset, ref int value)
             {
                 int chunk;
                 int sum = 0;
@@ -160,12 +160,12 @@
 
                 do
                 {
-                    chunk = polyline[index++] - Constants.ASCII.QuestionMark;
+                    chunk = polyline[offset++] - Constants.ASCII.QuestionMark;
                     sum |= (chunk & Constants.ASCII.UnitSeparator) << shifter;
                     shifter += Constants.ShiftLength;
-                } while (chunk >= Constants.ASCII.Space && index < polyline.Length);
+                } while (chunk >= Constants.ASCII.Space && offset < polyline.Length);
 
-                if (index >= polyline.Length && chunk >= Constants.ASCII.Space)
+                if (offset >= polyline.Length && chunk >= Constants.ASCII.Space)
                     return false;
 
                 value += (sum & 1) == 1 ? ~(sum >> 1) : sum >> 1;
@@ -175,7 +175,7 @@
 
             private static double GetDoubleRepresentation(int value)
             {
-                return Convert.ToDouble(value) / Constants.Precision;
+                return value / Constants.Precision;
             }
 
             public static class CoordinateValidator
