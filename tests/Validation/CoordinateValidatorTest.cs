@@ -12,112 +12,125 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Validation
     /// Defines the <see cref="CoordinateValidatorTest" />
     /// </summary>
     [TestClass]
-	[TestCategory(nameof(CoordinateValidator))]
-	public class CoordinateValidatorTest {
-		#region Methods
+    [TestCategory(nameof(CoordinateValidator))]
+    public class CoordinateValidatorTest
+    {
+        #region Methods
 
-		/// <summary>
-		/// The IsValid_InvalidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValid_InvalidInput_IsFalse() {
-			// Act
-			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+        /// <summary>
+        /// The IsValid_InvalidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValid_InvalidInput_IsFalse()
+        {
+            // Act
+            var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
 
-			foreach (var item in invalidCoordinateCollection) {
-				// Arrange
-				var result = CoordinateValidator.IsValid(item);
+            foreach (var item in invalidCoordinateCollection)
+            {
+                // Arrange
+                var result = CoordinateValidator.IsValid(item);
 
-				// Assert
-				Assert.IsFalse(result);
-			}
-		}
+                // Assert
+                Assert.IsFalse(result);
+            }
+        }
 
-		/// <summary>
-		/// The IsValid_ValidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValid_ValidInput_IsTrue() {
-			// Act
-			var validCoordinateCollection = Defaults.Coordinate.Valid;
+        /// <summary>
+        /// The IsValid_ValidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValid_ValidInput_IsTrue()
+        {
+            // Act
+            var validCoordinateCollection = Defaults.Coordinate.Valid;
 
-			foreach (var item in validCoordinateCollection) {
-				// Arrange
-				var result = CoordinateValidator.IsValid(item);
+            foreach (var item in validCoordinateCollection)
+            {
+                // Arrange
+                var result = CoordinateValidator.IsValid(item);
 
-				// Assert
-				Assert.IsTrue(result);
-			}
-		}
+                // Assert
+                Assert.IsTrue(result);
+            }
+        }
 
-		/// <summary>
-		/// The IsValidLatitude_InvalidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValidLatitude_InvalidInput_IsFalse() {
-			// Act
-			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+        /// <summary>
+        /// The IsValidLatitude_InvalidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValidLatitude_InvalidInput_IsFalse()
+        {
+            // Act
+            var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
 
-			foreach (var item in invalidCoordinateCollection) {
-				// Act
-				var result = CoordinateValidator.IsValidLatitude(item.Latitude);
+            foreach (var item in invalidCoordinateCollection)
+            {
+                // Act
+                var result = CoordinateValidator.IsValidLatitude(item.Latitude);
 
-				// Arrange
-				Assert.IsFalse(result);
-			}
-		}
+                // Arrange
+                Assert.IsFalse(result);
+            }
+        }
 
-		/// <summary>
-		/// The IsValidLatitude_ValidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValidLatitude_ValidInput_IsTrue() {
-			// Arrange
-			var validCoordinateCollection = Defaults.Coordinate.Valid;
+        /// <summary>
+        /// The IsValidLatitude_ValidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValidLatitude_ValidInput_IsTrue()
+        {
+            // Arrange
+            var validCoordinateCollection = Defaults.Coordinate.Valid;
 
-			foreach ((double Latitude, double Longitude) in validCoordinateCollection) {
-				// Act
-				var result = CoordinateValidator.IsValidLatitude(Latitude);
+            foreach ((double Latitude, double Longitude) in validCoordinateCollection)
+            {
+                // Act
+                var result = CoordinateValidator.IsValidLatitude(Latitude);
 
-				// Assert
-				Assert.IsTrue(result);
-			}
-		}
+                // Assert
+                Assert.IsTrue(result);
+            }
+        }
 
-		/// <summary>
-		/// The IsValidLongitude_InvalidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValidLongitude_InvalidInput_IsFalse() {
-			// Arrange
-			var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
+        /// <summary>
+        /// The IsValidLongitude_InvalidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValidLongitude_InvalidInput_IsFalse()
+        {
+            // Arrange
+            var invalidCoordinateCollection = Defaults.Coordinate.Invalid;
 
-			foreach (var item in invalidCoordinateCollection) {
-				// Act
-				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
+            foreach (var item in invalidCoordinateCollection)
+            {
+                // Act
+                var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
-				// Assert
-				Assert.IsFalse(result);
-			}
-		}
+                // Assert
+                Assert.IsFalse(result);
+            }
+        }
 
-		/// <summary>
-		/// The IsValidLongitude_ValidInput
-		/// </summary>
-		[TestMethod]
-		public void IsValidLongitude_ValidInput_IsTrue() {
-			// Arrange
-			var validCoordinateCollection = Defaults.Coordinate.Valid;
+        /// <summary>
+        /// The IsValidLongitude_ValidInput
+        /// </summary>
+        [TestMethod]
+        public void IsValidLongitude_ValidInput_IsTrue()
+        {
+            // Arrange
+            var validCoordinateCollection = Defaults.Coordinate.Valid;
 
-			foreach (var item in validCoordinateCollection) {
-				// Act
-				var result = CoordinateValidator.IsValidLongitude(item.Longitude);
+            foreach (var item in validCoordinateCollection)
+            {
+                // Act
+                var result = CoordinateValidator.IsValidLongitude(item.Longitude);
 
-				// Assert
-				Assert.IsTrue(result);
-			}
-		}
+                // Assert
+                Assert.IsTrue(result);
+            }
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }

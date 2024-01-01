@@ -137,8 +137,8 @@
 
                 EnsureCoordinates(coordinates);
 
-                int lastLatitude = 0;
-                int lastLongitude = 0;
+                int previousLatitude = 0;
+                int previousLongitude = 0;
 
                 var sb = _pool.Get();
 
@@ -147,11 +147,11 @@
                     int latitude = GetIntegerRepresentation(coordinate.Latitude);
                     int longitude = GetIntegerRepresentation(coordinate.Longitude);
 
-                    sb.Append(GetEncodedCharacters(latitude - lastLatitude).ToArray());
-                    sb.Append(GetEncodedCharacters(longitude - lastLongitude).ToArray());
+                    sb.Append(GetEncodedCharacters(latitude - previousLatitude).ToArray());
+                    sb.Append(GetEncodedCharacters(longitude - previousLongitude).ToArray());
 
-                    lastLatitude = latitude;
-                    lastLongitude = longitude;
+                    previousLatitude = latitude;
+                    previousLongitude = longitude;
                 }
 
                 var result = sb.ToString();

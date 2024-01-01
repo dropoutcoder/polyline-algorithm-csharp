@@ -6,6 +6,7 @@
 namespace DropoutCoder.PolylineAlgorithm
 {
     using DropoutCoder.PolylineAlgorithm.Validation;
+    using Microsoft.Extensions.ObjectPool;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -16,6 +17,8 @@ namespace DropoutCoder.PolylineAlgorithm
     /// </summary>
     public static class PolylineAlgorithm
     {
+        private static readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
+
         #region Methods
 
         /// <summary>
@@ -37,7 +40,6 @@ namespace DropoutCoder.PolylineAlgorithm
             int index = 0;
             int latitude = 0;
             int longitude = 0;
-            var result = new List<(double Latitude, double Longitude)>();
 
             // Looping through encoded polyline char array
             while (index < polyline.Length)
@@ -61,10 +63,8 @@ namespace DropoutCoder.PolylineAlgorithm
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
                 }
 
-                result.Add(coordinate);
+                yield return coordinate;
             }
-
-            return result;
         }
 
         /// <summary>
@@ -85,9 +85,9 @@ namespace DropoutCoder.PolylineAlgorithm
             EnsureCoordinates(coordinates);
 
             // Initializing local variables
-            int lastLat = 0;
-            int lastLng = 0;
-            var sb = new StringBuilder();
+            int previousLatitude = 0;
+            int previousLongitude = 0;
+            var sb = _pool.Get();
 
             // Looping over coordinates and building encoded result
             foreach (var coordinate in coordinates)
@@ -95,14 +95,18 @@ namespace DropoutCoder.PolylineAlgorithm
                 int latitude = GetIntegerRepresentation(coordinate.Latitude);
                 int longitude = GetIntegerRepresentation(coordinate.Longitude);
 
-                sb.Append(GetEncodedCharacters(latitude - lastLat).ToArray());
-                sb.Append(GetEncodedCharacters(longitude - lastLng).ToArray());
+                sb.Append(GetEncodedCharacters(latitude - previousLatitude).ToArray());
+                sb.Append(GetEncodedCharacters(longitude - previousLongitude).ToArray());
 
-                lastLat = latitude;
-                lastLng = longitude;
+                previousLatitude = latitude;
+                previousLongitude = longitude;
             }
 
-            return sb.ToString();
+            var result = sb.ToString();
+
+            _pool.Return(sb);
+
+            return result;
         }
 
         /// <summary>

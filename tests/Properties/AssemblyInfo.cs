@@ -1,5 +1,4 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Test = Microsoft.VisualStudio.TestTools.UnitTesting;
 [assembly: AssemblyTrademark("")]
