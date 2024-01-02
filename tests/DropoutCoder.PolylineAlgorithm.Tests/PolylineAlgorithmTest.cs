@@ -135,7 +135,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             }
 
             // Assert
-            Assert.ThrowsException<AggregateException>(() => EncodeInvalidCoordinates());
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => EncodeInvalidCoordinates());
         }
 
         /// <summary>

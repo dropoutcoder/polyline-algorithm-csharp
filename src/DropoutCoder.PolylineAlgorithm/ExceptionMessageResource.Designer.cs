@@ -19,7 +19,7 @@ namespace DropoutCoder.PolylineAlgorithm {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ExceptionMessageResource {
@@ -79,7 +79,7 @@ namespace DropoutCoder.PolylineAlgorithm {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Latitude: {0}, Longitude: {1}) is invalid. Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180..
+        ///   Looks up a localized string similar to Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180..
         /// </summary>
         internal static string ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat {
             get {

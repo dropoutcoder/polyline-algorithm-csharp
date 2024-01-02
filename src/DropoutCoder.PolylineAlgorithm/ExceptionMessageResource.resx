@@ -124,7 +124,7 @@
     <value>Argument cannot be null -or- empty char array.</value>
   </data>
   <data name="ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat" xml:space="preserve">
-    <value>Latitude: {0}, Longitude: {1}) is invalid. Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180.</value>
+    <value>Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180.</value>
   </data>
   <data name="PolylineCharArrayIsMalformed" xml:space="preserve">
     <value>Polyline is malformed.</value>

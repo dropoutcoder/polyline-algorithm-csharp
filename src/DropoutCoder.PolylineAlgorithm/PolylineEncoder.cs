@@ -108,7 +108,7 @@ namespace DropoutCoder.PolylineAlgorithm
             // Validate collection of coordinates
             if (!TryValidate(collection, out var invalid))
             {
-                throw new ArgumentException(ExceptionMessageResource.AggregateExceptionCoordinatesAreInvalidErrorMessage, nameof(collection));
+                throw new ArgumentOutOfRangeException(nameof(collection), ExceptionMessageResource.ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat);
             }
 
             // Initializing local variables
@@ -135,6 +135,7 @@ namespace DropoutCoder.PolylineAlgorithm
 
             return result;
 
+            #region Local functions
             bool TryValidate(IEnumerable<T> collection, out ICollection<T> validationErrors)
             {
                 validationErrors = new List<T>();
@@ -171,7 +172,8 @@ namespace DropoutCoder.PolylineAlgorithm
                 }
 
                 yield return (char)(rem + Constants.ASCII.QuestionMark);
-            }
+            } 
+            #endregion
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
