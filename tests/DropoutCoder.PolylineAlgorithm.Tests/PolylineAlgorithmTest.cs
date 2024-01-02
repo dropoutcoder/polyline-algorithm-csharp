@@ -5,12 +5,6 @@
 
 namespace DropoutCoder.PolylineAlgorithm.Tests
 {
-    using DropoutCoder.PolylineAlgorithm;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
     /// <summary>
     /// Defines the <see cref="PolylineAlgorithmTest" />
     /// </summary>
@@ -18,6 +12,14 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
     [TestCategory(nameof(PolylineAlgorithm))]
     public class PolylineAlgorithmTest
     {
+        internal static DefaultPolylineEncoder Encoder { get; private set; }
+
+        [ClassInitialize]
+        public static void Initialize(TestContext context)
+        {
+            Encoder = new DefaultPolylineEncoder(new DefaultCoordinateValidator());
+        }
+
         #region Methods
 
         /// <summary>
@@ -33,7 +35,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void DecodeEmptyPolylineCharArray()
             {
-                PolylineAlgorithm.Decode(emptyPolylineCharArray).ToArray();
+                Encoder.Decode(emptyPolylineCharArray).ToArray();
             }
 
             // Assert
@@ -53,7 +55,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void DecodeInvalidPolylineCharArray()
             {
-                PolylineAlgorithm.Decode(invalidPolylineCharrArray).ToArray();
+                Encoder.Decode(invalidPolylineCharrArray).ToArray();
             }
 
             // Assert
@@ -73,7 +75,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void DecodeNullPolylineCharArray()
             {
-                PolylineAlgorithm.Decode(nullPolylineCharArray).ToArray();
+                Encoder.Decode(nullPolylineCharArray).ToArray();
             }
 
             // Assert
@@ -91,7 +93,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             var validPolylineCharArray = Defaults.Polyline.Valid.ToCharArray();
 
             // Act
-            var result = PolylineAlgorithm.Decode(validPolylineCharArray);
+            var result = Encoder.Decode(validPolylineCharArray);
 
             // Assert
             CollectionAssert.AreEquivalent(Defaults.Coordinate.Valid.ToList(), result.ToList());
@@ -110,7 +112,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void EncodeEmptyCoordinates()
             {
-                PolylineAlgorithm.Encode(emptyCoordinates);
+                Encoder.Encode(emptyCoordinates);
             }
 
             // Assert
@@ -129,7 +131,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void EncodeInvalidCoordinates()
             {
-                PolylineAlgorithm.Encode(invalidCoordinates);
+                Encoder.Encode(invalidCoordinates);
             }
 
             // Assert
@@ -149,7 +151,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Act
             void EncodeNullCoordinates()
             {
-                PolylineAlgorithm.Encode(nullCoordinates);
+                Encoder.Encode(nullCoordinates);
             }
 
             // Assert
@@ -166,7 +168,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             var validCoordinates = Defaults.Coordinate.Valid;
 
             // Act
-            var result = PolylineAlgorithm.Encode(validCoordinates);
+            var result = Encoder.Encode(validCoordinates);
 
             // Assert
             Assert.AreEqual(Defaults.Polyline.Valid, result);

@@ -12,8 +12,4 @@
 		<PackageReference Include="Microsoft.Extensions.ObjectPool" Version="8.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\DropoutCoder.PolylineAlgorithm.csproj" />
-	</ItemGroup>
-
 </Project>
