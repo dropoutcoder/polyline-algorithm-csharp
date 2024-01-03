@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DropoutCoder.PolylineAlgori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DropoutCoder.PolylineAlgorithm.DependencyInjection", "src\DropoutCoder.PolylineAlgorithm.DependencyInjection\DropoutCoder.PolylineAlgorithm.DependencyInjection.csproj", "{0F07B56B-6D9A-4410-BCAB-C6A460C1E44E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests", "tests\DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests\DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests.csproj", "{9DC1BAD9-60DD-414D-BE88-E181D887A267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests", "tests\DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests\DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests.csproj", "{9DC1BAD9-60DD-414D-BE88-E181D887A267}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
