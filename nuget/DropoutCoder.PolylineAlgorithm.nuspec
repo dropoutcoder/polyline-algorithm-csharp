@@ -14,6 +14,6 @@
     <projectUrl>$nugetprojecturl$</projectUrl>
   </metadata>
   <files>
-    <file src="..\src\$nugetid$\$nugetid$\bin\$configuration$\netstandard2.1\$nugetid$.dll" target="lib\netstandard2.0" />
+    <file src="..\src\$nugetid$\$nugetid$\bin\$configuration$\netstandard2.1\$nugetid$.dll" target="lib\netstandard2.1" />
   </files>
 </package>
