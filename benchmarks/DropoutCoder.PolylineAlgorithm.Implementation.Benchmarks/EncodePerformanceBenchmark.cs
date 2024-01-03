@@ -16,6 +16,9 @@ namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
     {
         private Consumer _consumer = new Consumer();
 
+        [Params(10_000)]
+        public int N { get; set; }
+
         public IEnumerable<(int, IEnumerable<(double, double)>)> Coordinates()
         {
             yield return (1, new[] { (49.47383, 59.06250), (-58.37407, 25.31250), (52.99363, -120.93750), (-44.49024, -174.37500) });
@@ -48,7 +51,7 @@ namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
 
                 int lastLatitude = 0;
                 int lastLongitude = 0;
-                var sb = new StringBuilder();
+                var sb = new StringBuilder(coordinates.Count() * 5);
 
                 foreach (var coordinate in coordinates)
                 {
@@ -220,7 +223,7 @@ namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
 
         private class V3
         {
-            private static readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, int.MaxValue);
+            private static readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
 
             public static string Encode(IEnumerable<(double Latitude, double Longitude)> collection)
             {

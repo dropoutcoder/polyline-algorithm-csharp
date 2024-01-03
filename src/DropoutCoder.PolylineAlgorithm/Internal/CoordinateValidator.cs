@@ -1,19 +1,13 @@
-﻿//  
-// Copyright (c) Petr Šrámek. All rights reserved.  
-// Licensed under the MIT License. See LICENSE file in the project root for full license information.  
-//
-
-using DropoutCoder.PolylineAlgorithm.Internal;
-
-namespace DropoutCoder.PolylineAlgorithm
+﻿namespace DropoutCoder.PolylineAlgorithm.Internal
 {
     using System;
     using System.Runtime.CompilerServices;
 
+
     /// <summary>
     /// Performs coordinate validation
     /// </summary>
-    public class DefaultCoordinateValidator : ICoordinateValidator<(double Latitude, double Longitude)>
+    internal class CoordinateValidator
     {
         #region Methods
 

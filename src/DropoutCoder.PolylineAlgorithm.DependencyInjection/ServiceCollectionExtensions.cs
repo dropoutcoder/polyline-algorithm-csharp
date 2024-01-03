@@ -9,19 +9,10 @@ namespace DropoutCoder.PolylineAlgorithm.DependencyInjection
 
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddDefaultPolylineEncoder(this IServiceCollection services)
+        public static IServiceCollection AddPolylineEncoder(this IServiceCollection services)
         {
             return services
-                .AddPolylineEncoder<DefaultPolylineEncoder, DefaultCoordinateValidator, (double Latitude, double Longitude)>();
-        }
-
-        public static IServiceCollection AddPolylineEncoder<TEncoder, TValidator, TCoordinate>(this IServiceCollection services)
-            where TEncoder : class, IPolylineEncoder<TCoordinate>
-            where TValidator : class, ICoordinateValidator<TCoordinate>
-        {
-            return services
-                .AddSingleton<ICoordinateValidator<TCoordinate>, TValidator>()
-                .AddSingleton<IPolylineEncoder<TCoordinate>, TEncoder>();
+                .AddSingleton<IPolylineEncoder, PolylineEncoder>();
         }
     }
 }

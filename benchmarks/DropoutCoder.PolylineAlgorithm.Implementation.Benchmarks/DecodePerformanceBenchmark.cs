@@ -13,6 +13,10 @@ namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
     public class DecodePerformanceBenchmark
     {
         private Consumer _consumer = new Consumer();
+
+        [Params(10_000)]
+        public int N { get; set; }
+
         public static IEnumerable<(int, char[])> Polylines()
         {
             yield return (1, "mz}lHssngJj`gqSnx~lEcovfTnms{Zdy~qQj_deI".ToCharArray());

@@ -12,12 +12,12 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
     [TestCategory(nameof(PolylineAlgorithm))]
     public class PolylineAlgorithmTest
     {
-        internal static DefaultPolylineEncoder Encoder { get; private set; }
+        internal static PolylineEncoder Encoder { get; private set; }
 
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
-            Encoder = new DefaultPolylineEncoder(new DefaultCoordinateValidator());
+            Encoder = new PolylineEncoder();
         }
 
         #region Methods
@@ -135,7 +135,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             }
 
             // Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => EncodeInvalidCoordinates());
+            Assert.ThrowsException<AggregateException>(() => EncodeInvalidCoordinates());
         }
 
         /// <summary>

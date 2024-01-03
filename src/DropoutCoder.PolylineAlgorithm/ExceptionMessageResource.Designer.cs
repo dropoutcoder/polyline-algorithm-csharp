@@ -79,11 +79,11 @@ namespace DropoutCoder.PolylineAlgorithm {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Latitude must be in range between - 90 and +90. Longitude must be in range between -180 and +180..
+        ///   Looks up a localized string similar to Latitude {0} or longitude {1} is not valid. Latitude must be in range between -90 and +90. Longitude must be in range between -180 and +180..
         /// </summary>
-        internal static string ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat {
+        internal static string CoordinateValidationExceptionCoordinateIsOutOfRangeErrorMessageFormat {
             get {
-                return ResourceManager.GetString("ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat", resourceCulture);
+                return ResourceManager.GetString("CoordinateValidationExceptionCoordinateIsOutOfRangeErrorMessageFormat", resourceCulture);
             }
         }
         

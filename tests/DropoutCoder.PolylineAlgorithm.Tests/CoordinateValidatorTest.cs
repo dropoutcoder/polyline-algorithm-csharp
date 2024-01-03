@@ -5,19 +5,21 @@
 
 namespace DropoutCoder.PolylineAlgorithm.Tests
 {
+    using DropoutCoder.PolylineAlgorithm.Internal;
+
     /// <summary>
     /// Defines the <see cref="CoordinateValidatorTest" />
     /// </summary>
     [TestClass]
-    [TestCategory(nameof(DefaultCoordinateValidator))]
-    public class CoordinateValidatorTest
+    [TestCategory(nameof(CoordinateValidator))]
+    public class CoordinateValidatorTestCoordinate
     {
-        internal static DefaultCoordinateValidator Validator { get; private set; }
+        internal static CoordinateValidator Validator { get; private set; }
 
         [ClassInitialize]
         public static void Initialize(TestContext context)
         {
-            Validator = new DefaultCoordinateValidator();
+            Validator = new CoordinateValidator();
         }
 
         #region Methods

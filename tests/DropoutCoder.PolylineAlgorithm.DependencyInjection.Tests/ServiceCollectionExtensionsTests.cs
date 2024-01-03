@@ -16,22 +16,7 @@ namespace DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests
         public static void Initialize(TestContext context)
         {
             Services = new ServiceCollection()
-                .AddDefaultPolylineEncoder();
-        }
-
-        [TestMethod]
-        public void AddDefaultCoordinateValidatorEncoderTest()
-        {
-            // Arrange
-            var provider = Services
-                .BuildServiceProvider();
-
-            // Act
-            var encoder = provider
-                .GetRequiredService<ICoordinateValidator<(double, double)>>();
-
-            // Assert
-            Assert.IsInstanceOfType<ICoordinateValidator<(double, double)>>(encoder);
+                .AddPolylineEncoder();
         }
 
         [TestMethod]
@@ -43,10 +28,10 @@ namespace DropoutCoder.PolylineAlgorithm.DependencyInjection.Tests
 
             // Act
             var encoder = provider
-                .GetRequiredService<IPolylineEncoder<(double, double)>>();
+                .GetRequiredService<IPolylineEncoder>();
 
             // Assert
-            Assert.IsInstanceOfType<IPolylineEncoder<(double, double)>>(encoder);
+            Assert.IsInstanceOfType<IPolylineEncoder>(encoder);
         }
     }
 }

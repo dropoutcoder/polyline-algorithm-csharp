@@ -6,27 +6,20 @@
 namespace DropoutCoder.PolylineAlgorithm
 {
     using DropoutCoder.PolylineAlgorithm.Internal;
+    using Microsoft.Extensions.ObjectPool;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Runtime.CompilerServices;
     using System.Text;
 
-    public abstract class PolylineEncoder<T> : IPolylineEncoder<T>
+    public sealed class PolylineEncoder : IPolylineEncoder
     {
-        private static Lazy<DefaultPolylineEncoder> _default = new Lazy<DefaultPolylineEncoder>(() => new DefaultPolylineEncoder(new DefaultCoordinateValidator()));
-
-        public static IPolylineEncoder<(double Latitude, double Longitude)> Default => _default.Value;
-
-        public ICoordinateValidator<T> Validator { get; }
-
-        public PolylineEncoder(ICoordinateValidator<T> validator)
-        {
-            Validator = validator;
-        }
+        private readonly CoordinateValidator _validator = new CoordinateValidator();
+        private readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public IEnumerable<T> Decode(char[] polyline)
+        public IEnumerable<(double Latitude, double Longitude)> Decode(char[] polyline)
         {
             // Checking null and at least one character
             if (polyline == null || polyline.Length == 0)
@@ -54,15 +47,14 @@ namespace DropoutCoder.PolylineAlgorithm
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
                 }
 
-                var coordinate = CreateResult(GetCoordinate(latitude), GetCoordinate(longitude));
+                var coordinate = (GetCoordinate(latitude), GetCoordinate(longitude));
 
-                if (!Validator.IsValid(coordinate))
+                if (!_validator.IsValid(coordinate))
                 {
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
                 }
 
                 yield return coordinate;
-
 
                 #region Local functions
 
@@ -98,29 +90,27 @@ namespace DropoutCoder.PolylineAlgorithm
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public string Encode(IEnumerable<T> collection)
+        public string Encode(IEnumerable<(double Latitude, double Longitude)> coordinates)
         {
-            if (collection == null || !collection.GetEnumerator().MoveNext())
+            if (coordinates == null || !coordinates.GetEnumerator().MoveNext())
             {
-                throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(collection));
+                throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(coordinates));
             }
 
             // Validate collection of coordinates
-            if (!TryValidate(collection, out var invalid))
+            if (!TryValidate(coordinates, out var exceptions))
             {
-                throw new ArgumentOutOfRangeException(nameof(collection), ExceptionMessageResource.ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat);
+                throw new AggregateException(exceptions);
             }
 
             // Initializing local variables
             int previousLatitude = 0;
             int previousLongitude = 0;
-            var sb = new StringBuilder();
+            var sb = _pool.Get();
 
             // Looping over coordinates and building encoded result
-            foreach (var item in collection)
+            foreach (var coordinate in coordinates)
             {
-                var coordinate = GetCoordinate(item);
-
                 int latitude = Round(coordinate.Latitude);
                 int longitude = Round(coordinate.Longitude);
 
@@ -133,22 +123,24 @@ namespace DropoutCoder.PolylineAlgorithm
 
             var result = sb.ToString();
 
+            _pool.Return(sb);
+
             return result;
 
             #region Local functions
-            bool TryValidate(IEnumerable<T> collection, out ICollection<T> validationErrors)
+            bool TryValidate(IEnumerable<(double Latitude, double Longitude)> collection, out ICollection<CoordinateValidationException> exceptions)
             {
-                validationErrors = new List<T>();
+                exceptions = new List<CoordinateValidationException>(collection.Count());
 
                 foreach (var item in collection)
                 {
-                    if (!Validator.IsValid(item))
+                    if (!_validator.IsValid(item))
                     {
-                        validationErrors.Add(item);
+                        exceptions.Add(new CoordinateValidationException(item.Latitude, item.Longitude));
                     }
                 }
 
-                return !validationErrors.GetEnumerator().MoveNext();
+                return !exceptions.GetEnumerator().MoveNext();
             }
 
             int Round(double value)
@@ -172,14 +164,8 @@ namespace DropoutCoder.PolylineAlgorithm
                 }
 
                 yield return (char)(rem + Constants.ASCII.QuestionMark);
-            } 
-            #endregion
+            }
         }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected abstract T CreateResult(double latitude, double longitude);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected abstract (double Latitude, double Longitude) GetCoordinate(T value);
+        #endregion
     }
 }
