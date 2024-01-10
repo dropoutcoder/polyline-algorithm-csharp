@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DropoutCoder.PolylineAlgorithm.csproj" />
+    <ProjectReference Include="..\..\src\DropoutCoder.PolylineAlgorithm\DropoutCoder.PolylineAlgorithm.csproj" />
   </ItemGroup>
 
 </Project>

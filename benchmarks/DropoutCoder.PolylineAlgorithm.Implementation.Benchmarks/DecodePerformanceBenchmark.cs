@@ -1,4 +1,9 @@
-﻿namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
+﻿//  
+// Copyright (c) Petr Šrámek. All rights reserved.  
+// Licensed under the MIT License. See LICENSE file in the project root for full license information.  
+//
+
+namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
 {
     using BenchmarkDotNet.Attributes;
     using BenchmarkDotNet.Engines;
@@ -8,6 +13,10 @@
     public class DecodePerformanceBenchmark
     {
         private Consumer _consumer = new Consumer();
+
+        [Params(10_000)]
+        public int N { get; set; }
+
         public static IEnumerable<(int, char[])> Polylines()
         {
             yield return (1, "mz}lHssngJj`gqSnx~lEcovfTnms{Zdy~qQj_deI".ToCharArray());
@@ -21,15 +30,11 @@
 
         [Benchmark]
         [ArgumentsSource(nameof(Polylines))]
-        public void Decode_V1_Parallel((int, char[]) arg) => Parallel.For(0, 100, (i) => V1.Decode(arg.Item2).Consume(_consumer));
-
-        [Benchmark]
-        [ArgumentsSource(nameof(Polylines))]
         public void Decode_V2((int, char[]) arg) => V2.Decode(arg.Item2).Consume(_consumer);
 
         [Benchmark]
         [ArgumentsSource(nameof(Polylines))]
-        public void Decode_V2_Parallel((int, char[]) arg) => Parallel.For(0, 100, (i) => V2.Decode(arg.Item2).Consume(_consumer));
+        public void Decode_V3((int, char[]) arg) => V3.Decode(arg.Item2).Consume(_consumer);
 
         private class V1
         {
@@ -194,6 +199,122 @@
                 {
                     return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
                 }
+            }
+        }
+
+        private class V3
+        {
+            public static IEnumerable<(double Latitude, double Longitude)> Decode(char[] polyline)
+            {
+                // Checking null and at least one character
+                if (polyline == null || polyline.Length == 0)
+                {
+                    throw new ArgumentException(nameof(polyline));
+                }
+
+                // Initialize local variables
+                int index = 0;
+                int latitude = 0;
+                int longitude = 0;
+
+                // Looping through encoded polyline char array
+                while (index < polyline.Length)
+                {
+                    // Attempting to calculate next latitude value. If failed exception is thrown
+                    if (!TryCalculateNext(polyline, ref index, ref latitude))
+                    {
+                        throw new InvalidOperationException();
+                    }
+
+                    // Attempting to calculate next longitude value. If failed exception is thrown
+                    if (!TryCalculateNext(polyline, ref index, ref longitude))
+                    {
+                        throw new InvalidOperationException();
+                    }
+
+                    var coordinate = CreateResult(GetCoordinate(latitude), GetCoordinate(longitude));
+
+                    if (!Validator.IsValid(coordinate))
+                    {
+                        throw new InvalidOperationException();
+                    }
+
+                    yield return coordinate;
+
+
+                    #region Local functions
+
+                    bool TryCalculateNext(char[] polyline, ref int index, ref int value)
+                    {
+                        // Local variable initialization
+                        int chunk;
+                        int sum = 0;
+                        int shifter = 0;
+
+                        do
+                        {
+                            chunk = polyline[index++] - Constants.ASCII.QuestionMark;
+                            sum |= (chunk & Constants.ASCII.UnitSeparator) << shifter;
+                            shifter += Constants.ShiftLength;
+                        } while (chunk >= Constants.ASCII.Space && index < polyline.Length);
+
+                        if (index >= polyline.Length && chunk >= Constants.ASCII.Space)
+                            return false;
+
+                        value += (sum & 1) == 1 ? ~(sum >> 1) : sum >> 1;
+
+                        return true;
+                    }
+
+                    double GetCoordinate(int value)
+                    {
+                        return Convert.ToDouble(value) / Constants.Precision;
+                    }
+
+                    #endregion
+                }
+            }
+
+            protected static (double Latitude, double Longitude) CreateResult(double latitude, double longitude)
+            {
+                return (latitude, longitude);
+            }
+
+            public static class Validator
+            {
+                #region Methods
+
+                /// <summary>
+                /// Performs coordinate validation
+                /// </summary>
+                /// <param name="coordinate">Coordinate to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                public static bool IsValid((double Latitude, double Longitude) coordinate)
+                {
+                    return IsValidLatitude(ref coordinate.Latitude) && IsValidLongitude(ref coordinate.Longitude);
+                }
+
+                /// <summary>
+                /// Performs latitude validation
+                /// </summary>
+                /// <param name="latitude">Latitude value to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                private static bool IsValidLatitude(ref readonly double latitude)
+                {
+                    return latitude >= Constants.Coordinate.MinLatitude && latitude <= Constants.Coordinate.MaxLatitude;
+                }
+
+                /// <summary>
+                /// Performs longitude validation
+                /// </summary>
+                /// <param name="longitude">Longitude value to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                private static bool IsValidLongitude(ref readonly double longitude)
+                {
+                    return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
+                }
+
+                #endregion
             }
         }
     }

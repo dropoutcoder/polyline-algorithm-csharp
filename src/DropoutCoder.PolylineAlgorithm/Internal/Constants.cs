@@ -3,7 +3,7 @@
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.  
 //
 
-namespace DropoutCoder.PolylineAlgorithm
+namespace DropoutCoder.PolylineAlgorithm.Internal
 {
     /// <summary>
     /// Defines global constant values
@@ -67,12 +67,12 @@ namespace DropoutCoder.PolylineAlgorithm
             public const int MaxLongitude = 180;
 
             /// <summary>
-            /// Defines the minimum value for latitude
+            /// Defines the maximum value for latitude
             /// </summary>
             public const int MinLatitude = -MaxLatitude;
 
             /// <summary>
-            /// Defines the minimum value for longitude
+            /// Defines the maximum value for longitude
             /// </summary>
             public const int MinLongitude = -MaxLongitude;
 

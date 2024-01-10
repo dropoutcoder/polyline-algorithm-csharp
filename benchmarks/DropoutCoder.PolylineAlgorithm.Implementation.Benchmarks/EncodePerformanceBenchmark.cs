@@ -1,4 +1,9 @@
-﻿namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
+﻿//  
+// Copyright (c) Petr Šrámek. All rights reserved.  
+// Licensed under the MIT License. See LICENSE file in the project root for full license information.  
+//
+
+namespace DropoutCoder.PolylineAlgorithm.Implementation.Benchmarks
 {
     using BenchmarkDotNet.Attributes;
     using BenchmarkDotNet.Engines;
@@ -10,6 +15,9 @@
     public class EncodePerformanceBenchmark
     {
         private Consumer _consumer = new Consumer();
+
+        [Params(10_000)]
+        public int N { get; set; }
 
         public IEnumerable<(int, IEnumerable<(double, double)>)> Coordinates()
         {
@@ -24,17 +32,11 @@
 
         [Benchmark]
         [ArgumentsSource(nameof(Coordinates))]
-        public void Encode_V1_Parallel((int, IEnumerable<(double, double)>) arg) => Parallel.For(100, 200, (i) => V1.Encode(arg.Item2).Consume(_consumer));
-
-
-        [Benchmark]
-        [ArgumentsSource(nameof(Coordinates))]
         public void Encode_V2((int, IEnumerable<(double, double)>) arg) => V2.Encode(arg.Item2).Consume(_consumer);
 
-
         [Benchmark]
         [ArgumentsSource(nameof(Coordinates))]
-        public void Encode_V2_Parallel((int, IEnumerable<(double, double)>) arg) => Parallel.For(100, 200, (i) => V2.Encode(arg.Item2).Consume(_consumer));
+        public void Encode_V3((int, IEnumerable<(double, double)>) arg) => V3.Encode(arg.Item2).Consume(_consumer);
 
         private class V1
         {
@@ -49,7 +51,7 @@
 
                 int lastLatitude = 0;
                 int lastLongitude = 0;
-                var sb = new StringBuilder();
+                var sb = new StringBuilder(coordinates.Count() * 5);
 
                 foreach (var coordinate in coordinates)
                 {
@@ -216,6 +218,131 @@
                 {
                     return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
                 }
+            }
+        }
+
+        private class V3
+        {
+            private static readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
+
+            public static string Encode(IEnumerable<(double Latitude, double Longitude)> collection)
+            {
+                if (collection == null || !collection.GetEnumerator().MoveNext())
+                {
+                    throw new ArgumentException(nameof(collection));
+                }
+
+                // Validate collection of coordinates
+                if (!TryValidate(collection, out var invalid))
+                {
+                    throw new ArgumentException(nameof(collection));
+                }
+
+                // Initializing local variables
+                int previousLatitude = 0;
+                int previousLongitude = 0;
+                var sb = _pool.Get();
+
+                // Looping over coordinates and building encoded result
+                foreach (var item in collection)
+                {
+                    var coordinate = GetCoordinate(item);
+
+                    int latitude = Round(coordinate.Latitude);
+                    int longitude = Round(coordinate.Longitude);
+
+                    sb.Append(GetSequence(latitude - previousLatitude).ToArray());
+                    sb.Append(GetSequence(longitude - previousLongitude).ToArray());
+
+                    previousLatitude = latitude;
+                    previousLongitude = longitude;
+                }
+
+                var result = sb.ToString();
+
+                _pool.Return(sb);
+
+                return result;
+
+                bool TryValidate(IEnumerable<(double Latitude, double Longitude)> collection, out ICollection<(double Latitude, double Longitude)> validationErrors)
+                {
+                    validationErrors = new List<(double Latitude, double Longitude)>();
+
+                    foreach (var item in collection)
+                    {
+                        if (!Validator.IsValid(item))
+                        {
+                            validationErrors.Add(item);
+                        }
+                    }
+
+                    return !validationErrors.GetEnumerator().MoveNext();
+                }
+
+                int Round(double value)
+                {
+                    return (int)Math.Round(value * Constants.Precision);
+                }
+
+                IEnumerable<char> GetSequence(int value)
+                {
+                    int shifted = value << 1;
+                    if (value < 0)
+                        shifted = ~shifted;
+
+                    int rem = shifted;
+
+                    while (rem >= Constants.ASCII.Space)
+                    {
+                        yield return (char)((Constants.ASCII.Space | rem & Constants.ASCII.UnitSeparator) + Constants.ASCII.QuestionMark);
+
+                        rem >>= Constants.ShiftLength;
+                    }
+
+                    yield return (char)(rem + Constants.ASCII.QuestionMark);
+                }
+            }
+
+            protected static (double Latitude, double Longitude) GetCoordinate((double Latitude, double Longitude) value)
+            {
+                return value;
+            }
+
+            public static class Validator
+            {
+                #region Methods
+
+                /// <summary>
+                /// Performs coordinate validation
+                /// </summary>
+                /// <param name="coordinate">Coordinate to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                public static bool IsValid((double Latitude, double Longitude) coordinate)
+                {
+                    return IsValidLatitude(ref coordinate.Latitude) && IsValidLongitude(ref coordinate.Longitude);
+                }
+
+                /// <summary>
+                /// Performs latitude validation
+                /// </summary>
+                /// <param name="latitude">Latitude value to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                private static bool IsValidLatitude(ref readonly double latitude)
+                {
+                    return latitude >= Constants.Coordinate.MinLatitude && latitude <= Constants.Coordinate.MaxLatitude;
+                }
+
+                /// <summary>
+                /// Performs longitude validation
+                /// </summary>
+                /// <param name="longitude">Longitude value to validate</param>
+                /// <returns>Returns validation result. If valid then true, otherwise false.</returns>
+                private static bool IsValidLongitude(ref readonly double longitude)
+                {
+                    return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
+                }
+
+                #endregion
             }
         }
     }
