@@ -16,8 +16,6 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Encoding
     [TestCategory(nameof(PolylineEncoding))]
     public class PolylineEncodingTest : PolylineEncoding
     {
-        #region Methods
-
         /// <summary>
         /// The CreateResult_AreEqual
         /// </summary>
@@ -49,7 +47,5 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Encoding
             // Assert
             Assert.AreEqual(validCoordinate, result);
         }
-
-        #endregion
     }
 }

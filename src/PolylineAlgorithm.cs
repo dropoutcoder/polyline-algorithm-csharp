@@ -19,8 +19,6 @@ namespace DropoutCoder.PolylineAlgorithm
     {
         private static readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
 
-        #region Methods
-
         /// <summary>
         /// Method decodes polyline encoded representation to coordinates.
         /// </summary>
@@ -210,7 +208,5 @@ namespace DropoutCoder.PolylineAlgorithm
 
             return true;
         }
-
-        #endregion
     }
 }

@@ -7,16 +7,12 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
 {
     using System.Collections.Generic;
 
-    #region Interfaces
-
     /// <summary>
     /// Defines base interface for all polyline encodings
     /// </summary>
     /// <typeparam name="T">Desired type used to decode to and encode from</typeparam>
     public interface IPolylineEncoding<T>
     {
-        #region Methods
-
         /// <summary>
         /// Method performs decoding from polyline encoded <see cref="string"/> to <see cref="IEnumerable{T}"/>
         /// </summary>
@@ -30,9 +26,5 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
         /// <param name="source">Coordinates to encode</param>
         /// <returns>Polyline encoded result</returns>
         string Encode(IEnumerable<T> source);
-
-        #endregion
     }
-
-    #endregion
 }

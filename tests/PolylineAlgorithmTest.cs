@@ -18,8 +18,6 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
     [TestCategory(nameof(PolylineAlgorithm))]
     public class PolylineAlgorithmTest
     {
-        #region Methods
-
         /// <summary>
         /// Method is testing <see cref="PolylineAlgorithm.Decode(char[])" /> method. Empty <see langword="char"/>[] is passed as parameter.
         /// Expected result is <see cref="ArgumentException"/>.
@@ -171,7 +169,5 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
             // Assert
             Assert.AreEqual(Defaults.Polyline.Valid, result);
         }
-
-        #endregion
     }
 }

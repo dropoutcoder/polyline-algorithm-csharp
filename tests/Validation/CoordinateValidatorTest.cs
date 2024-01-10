@@ -15,8 +15,6 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Validation
     [TestCategory(nameof(CoordinateValidator))]
     public class CoordinateValidatorTest
     {
-        #region Methods
-
         /// <summary>
         /// The IsValid_InvalidInput
         /// </summary>
@@ -130,7 +128,5 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Validation
                 Assert.IsTrue(result);
             }
         }
-
-        #endregion
     }
 }

@@ -10,8 +10,6 @@ namespace DropoutCoder.PolylineAlgorithm.Validation
     /// </summary>
     public static class CoordinateValidator
     {
-        #region Methods
-
         /// <summary>
         /// Performs coordinate validation
         /// </summary>
@@ -41,7 +39,5 @@ namespace DropoutCoder.PolylineAlgorithm.Validation
         {
             return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
         }
-
-        #endregion
     }
 }

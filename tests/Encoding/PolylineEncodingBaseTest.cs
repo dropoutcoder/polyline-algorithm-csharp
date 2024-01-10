@@ -18,8 +18,6 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Encoding
     [TestCategory(nameof(PolylineEncodingBase<(double latitude, double longitude)>))]
     public class PolylineEncodingBaseTest : PolylineEncodingBase<(double latitude, double longitude)>
     {
-        #region Methods
-
         /// <summary>
         /// The Decode_NullInput
         /// </summary>
@@ -188,8 +186,6 @@ namespace DropoutCoder.PolylineAlgorithm.Tests.Encoding
         {
             return source;
         }
-
-        #endregion
 
         #endregion
     }

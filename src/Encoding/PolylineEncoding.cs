@@ -10,8 +10,6 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
     /// </summary>
     public class PolylineEncoding : PolylineEncodingBase<(double Latitude, double Longitude)>
     {
-        #region Methods
-
         /// <summary>
         /// Method creates <see cref="System.ValueTuple[double, double]"/> result from passed latitude and longitude arguments
         /// </summary>
@@ -32,7 +30,5 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
         {
             return source;
         }
-
-        #endregion
     }
 }

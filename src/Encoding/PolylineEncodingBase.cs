@@ -15,8 +15,6 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
     /// <typeparam name="T"></typeparam>
     public abstract class PolylineEncodingBase<T> : IPolylineEncoding<T>
     {
-        #region Methods
-
         /// <summary>
         /// Method performs decode operation and coversion to desired type
         /// </summary>
@@ -24,7 +22,7 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
         /// <returns>The <see cref="IEnumerable{T}"/></returns>
         public IEnumerable<T> Decode(string source)
         {
-            if (string.IsNullOrEmpty(source))
+            if (string.IsNullOrWhiteSpace(source))
             {
                 throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(source));
             }
@@ -66,7 +64,5 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
         /// <param name="source">The <see cref="T"/></param>
         /// <returns>The <see cref="System.ValueTuple[double, double]"/></returns>
         protected abstract (double Latitude, double Longitude) GetCoordinate(T source);
-
-        #endregion
     }
 }
