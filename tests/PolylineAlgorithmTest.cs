@@ -26,7 +26,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
         public void Decode_EmptyInput_ThrowsException()
         {
             // Arrange
-            var emptyPolylineCharArray = Defaults.Polyline.Empty.ToCharArray();
+            var emptyPolylineCharArray = Defaults.Polyline.Empty;
 
             // Act
             void DecodeEmptyPolylineCharArray()
@@ -46,7 +46,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
         public void Decode_InvalidInput_ThrowsException()
         {
             // Arrange
-            var invalidPolylineCharrArray = Defaults.Polyline.Invalid.ToCharArray();
+            var invalidPolylineCharrArray = Defaults.Polyline.Invalid;
 
             // Act
             void DecodeInvalidPolylineCharArray()
@@ -66,7 +66,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
         public void Decode_NullInput_ThrowsException()
         {
             // Arrange
-            var nullPolylineCharArray = (char[])null;
+            var nullPolylineCharArray = (string)null;
 
             // Act
             void DecodeNullPolylineCharArray()
@@ -86,7 +86,7 @@ namespace DropoutCoder.PolylineAlgorithm.Tests
         public void Decode_ValidInput_AreEquivalent()
         {
             // Arrange
-            var validPolylineCharArray = Defaults.Polyline.Valid.ToCharArray();
+            var validPolylineCharArray = Defaults.Polyline.Valid;
 
             // Act
             var result = PolylineAlgorithm.Decode(validPolylineCharArray);
