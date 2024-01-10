@@ -26,10 +26,10 @@ namespace DropoutCoder.PolylineAlgorithm
         /// <returns>Returns coordinates.</returns>
         /// <exception cref="ArgumentException">If polyline argument is null -or- empty char array.</exception>
         /// <exception cref="InvalidOperationException">If polyline representation is not in correct format.</exception>
-        public static IEnumerable<(double Latitude, double Longitude)> Decode(char[] polyline)
+        public static IEnumerable<(double Latitude, double Longitude)> Decode(string polyline)
         {
             // Checking null and at least one character
-            if (polyline == null || !polyline.Any())
+            if (polyline == null || polyline.Length == 0)
             {
                 throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(polyline));
             }
@@ -54,14 +54,46 @@ namespace DropoutCoder.PolylineAlgorithm
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
                 }
 
-                var coordinate = (GetDoubleRepresentation(latitude), GetDoubleRepresentation(longitude));
+                var coordinate = (GetCoordinate(latitude), GetCoordinate(longitude));
 
+                // Validating decoded coordinate. If not valid exception is thrown
                 if (!CoordinateValidator.IsValid(coordinate))
                 {
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
                 }
 
                 yield return coordinate;
+
+                #region Local functions
+
+                bool TryCalculateNext(string polyline, ref int index, ref int value)
+                {
+                    // Local variable initialization
+                    int chunk;
+                    int sum = 0;
+                    int shifter = 0;
+
+                    do
+                    {
+                        chunk = polyline[index++] - Constants.ASCII.QuestionMark;
+                        sum |= (chunk & Constants.ASCII.UnitSeparator) << shifter;
+                        shifter += Constants.ShiftLength;
+                    } while (chunk >= Constants.ASCII.Space && index < polyline.Length);
+
+                    if (index >= polyline.Length && chunk >= Constants.ASCII.Space)
+                        return false;
+
+                    value += (sum & 1) == 1 ? ~(sum >> 1) : sum >> 1;
+
+                    return true;
+                }
+
+                double GetCoordinate(int value)
+                {
+                    return Convert.ToDouble(value) / Constants.Precision;
+                }
+
+                #endregion
             }
         }
 
@@ -74,139 +106,78 @@ namespace DropoutCoder.PolylineAlgorithm
         /// <exception cref="AggregateException">If one or more coordinate is out of range</exception>
         public static string Encode(IEnumerable<(double Latitude, double Longitude)> coordinates)
         {
-            if (coordinates == null || !coordinates.Any())
+            if (coordinates == null || !coordinates.GetEnumerator().MoveNext())
             {
                 throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(coordinates));
             }
 
-            // Ensuring coordinates are valid, otherwise throws an aggregate exception
-            EnsureCoordinates(coordinates);
+            // Validate collection of coordinates
+            if (!TryValidate(coordinates, out var exceptions))
+            {
+                throw new AggregateException(exceptions);
+            }
 
             // Initializing local variables
             int previousLatitude = 0;
             int previousLongitude = 0;
-            var sb = _pool.Get();
+            var sb = new StringBuilder(coordinates.Count() * 5);
 
             // Looping over coordinates and building encoded result
             foreach (var coordinate in coordinates)
             {
-                int latitude = GetIntegerRepresentation(coordinate.Latitude);
-                int longitude = GetIntegerRepresentation(coordinate.Longitude);
+                int latitude = Round(coordinate.Latitude);
+                int longitude = Round(coordinate.Longitude);
 
-                sb.Append(GetEncodedCharacters(latitude - previousLatitude).ToArray());
-                sb.Append(GetEncodedCharacters(longitude - previousLongitude).ToArray());
+                sb.Append(GetSequence(latitude - previousLatitude).ToArray());
+                sb.Append(GetSequence(longitude - previousLongitude).ToArray());
 
                 previousLatitude = latitude;
                 previousLongitude = longitude;
             }
 
-            var result = sb.ToString();
+            return sb.ToString();
 
-            _pool.Return(sb);
+            #region Local functions
 
-            return result;
-        }
-
-        /// <summary>
-        /// Method performs coordinates validation. Throws exception, if invalid coordinate is found
-        /// </summary>
-        /// <param name="coordinates">Coordinates to validate</param>
-        /// <exception cref="AggregateException">If one or more coordinate is out of range -or- invalid</exception>
-        private static void EnsureCoordinates(IEnumerable<(double Latitude, double Longitude)> coordinates)
-        {
-            // Selecting invalid coordinates
-            var invalidCoordinates = coordinates
-                .Where(c => !CoordinateValidator.IsValid(c));
-
-            // If any invalid coordinates exists throw an aggregate exception with inner argument out of range exception
-            if (invalidCoordinates.Any())
+            bool TryValidate(IEnumerable<(double Latitude, double Longitude)> collection, out ICollection<CoordinateValidationException> exceptions)
             {
-                throw new AggregateException(
-                    ExceptionMessageResource.AggregateExceptionCoordinatesAreInvalidErrorMessage,
-                    invalidCoordinates
-                        .Select(c =>
-                            new ArgumentOutOfRangeException(
-                                string.Format(
-                                    ExceptionMessageResource.ArgumentExceptionCoordinateIsOutOfRangeErrorMessageFormat,
-                                    c.Latitude,
-                                    c.Longitude
-                                )
-                            )
-                        )
-                );
-            }
-        }
+                exceptions = new List<CoordinateValidationException>(collection.Count());
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value">Rounded integer representation of precise double value</param>
-        /// <returns>Returns value with specific precision. See <see cref="Constants.Precision"/></returns>
-        private static double GetDoubleRepresentation(int value)
-        {
-            return Convert.ToDouble(value) / Constants.Precision;
-        }
+                foreach (var item in collection)
+                {
+                    if (!CoordinateValidator.IsValid(item))
+                    {
+                        exceptions.Add(new CoordinateValidationException(item.Latitude, item.Longitude));
+                    }
+                }
 
-        /// <summary>
-        /// Method converts value to polyline encoded characters
-        /// </summary>
-        /// <param name="value">Difference between current and previous latitude or longitude value</param>
-        private static IEnumerable<char> GetEncodedCharacters(int value)
-        {
-            int shifted = value << 1;
-            if (value < 0)
-                shifted = ~shifted;
-
-            int rem = shifted;
-
-            while (rem >= Constants.ASCII.Space)
-            {
-                yield return (char)((Constants.ASCII.Space | rem & Constants.ASCII.UnitSeparator) + Constants.ASCII.QuestionMark);
-
-                rem >>= Constants.ShiftLength;
+                return !exceptions.GetEnumerator().MoveNext();
             }
 
-            yield return (char)(rem + Constants.ASCII.QuestionMark);
-        }
-
-        /// <summary>
-        /// Method 
-        /// </summary>
-        /// <param name="value">Precise double representation</param>
-        /// <returns></returns>
-        private static int GetIntegerRepresentation(double value)
-        {
-            return (int)Math.Round(value * Constants.Precision);
-        }
-
-        /// <summary>
-        /// Tries to calculate next integer representation of encoded polyline part
-        /// </summary>
-        /// <param name="polyline">The <see cref="char[]"/></param>
-        /// <param name="index">The <see cref="int"/></param>
-        /// <param name="value">The <see cref="int"/></param>
-        /// <returns>The <see cref="bool"/></returns>
-        private static bool TryCalculateNext(char[] polyline, ref int index, ref int value)
-        {
-            // Local variable initialization
-            int chunk;
-            int sum = 0;
-            int shifter = 0;
-
-
-            do
+            int Round(double value)
             {
-                chunk = polyline[index++] - Constants.ASCII.QuestionMark;
-                sum |= (chunk & Constants.ASCII.UnitSeparator) << shifter;
-                shifter += Constants.ShiftLength;
-            } while (chunk >= Constants.ASCII.Space && index < polyline.Length);
+                return (int)Math.Round(value * Constants.Precision);
+            }
 
-            if (index >= polyline.Length && chunk >= Constants.ASCII.Space)
-                return false;
+            IEnumerable<char> GetSequence(int value)
+            {
+                int shifted = value << 1;
+                if (value < 0)
+                    shifted = ~shifted;
 
-            value += (sum & 1) == 1 ? ~(sum >> 1) : sum >> 1;
+                int rem = shifted;
 
-            return true;
+                while (rem >= Constants.ASCII.Space)
+                {
+                    yield return (char)((Constants.ASCII.Space | rem & Constants.ASCII.UnitSeparator) + Constants.ASCII.QuestionMark);
+
+                    rem >>= Constants.ShiftLength;
+                }
+
+                yield return (char)(rem + Constants.ASCII.QuestionMark);
+            }
+
+            #endregion
         }
     }
 }

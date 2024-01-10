@@ -20,14 +20,12 @@ namespace DropoutCoder.PolylineAlgorithm.Encoding
         /// </summary>
         /// <param name="source">The <see cref="string"/></param>
         /// <returns>The <see cref="IEnumerable{T}"/></returns>
-        public IEnumerable<T> Decode(string source)
+        public IEnumerable<T> Decode(string polyline)
         {
-            if (string.IsNullOrWhiteSpace(source))
+            if (string.IsNullOrWhiteSpace(polyline))
             {
-                throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(source));
+                throw new ArgumentException(ExceptionMessageResource.ArgumentCannotBeNullOrEmpty, nameof(polyline));
             }
-
-            char[] polyline = source.ToCharArray();
 
             return PolylineAlgorithm.Decode(polyline)
                 .Select(c => CreateResult(c.Latitude, c.Longitude));
