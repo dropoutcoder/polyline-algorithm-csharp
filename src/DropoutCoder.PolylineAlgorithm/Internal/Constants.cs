@@ -66,6 +66,16 @@ namespace DropoutCoder.PolylineAlgorithm.Internal
             /// </summary>
             public const int MaxLongitude = 180;
 
+            /// <summary>
+            /// Defines the maximum value for latitude
+            /// </summary>
+            public const int MinLatitude = -MaxLatitude;
+
+            /// <summary>
+            /// Defines the maximum value for longitude
+            /// </summary>
+            public const int MinLongitude = -MaxLongitude;
+
             #endregion
         }
     }

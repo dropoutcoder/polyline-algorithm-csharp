@@ -19,7 +19,19 @@
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool IsValid((double Latitude, double Longitude) coordinate)
         {
-            return Math.Abs(coordinate.Latitude) <= Constants.Coordinate.MaxLatitude && Math.Abs(coordinate.Longitude) <= Constants.Coordinate.MaxLongitude;
+            return IsValidLatitude(coordinate.Latitude) && IsValidLongitude(coordinate.Longitude);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool IsValidLatitude(double latitude)
+        {
+            return latitude >= Constants.Coordinate.MinLatitude && latitude <= Constants.Coordinate.MaxLatitude;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool IsValidLongitude(double longitude)
+        {
+            return longitude >= Constants.Coordinate.MinLongitude && longitude <= Constants.Coordinate.MaxLongitude;
         }
 
         #endregion

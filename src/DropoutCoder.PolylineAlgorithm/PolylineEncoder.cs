@@ -6,7 +6,6 @@
 namespace DropoutCoder.PolylineAlgorithm
 {
     using DropoutCoder.PolylineAlgorithm.Internal;
-    using Microsoft.Extensions.ObjectPool;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -16,7 +15,6 @@ namespace DropoutCoder.PolylineAlgorithm
     public sealed class PolylineEncoder : IPolylineEncoder
     {
         private readonly CoordinateValidator _validator = new CoordinateValidator();
-        private readonly ObjectPool<StringBuilder> _pool = new DefaultObjectPoolProvider().CreateStringBuilderPool(5, 250);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public IEnumerable<(double Latitude, double Longitude)> Decode(char[] polyline)
@@ -49,6 +47,7 @@ namespace DropoutCoder.PolylineAlgorithm
 
                 var coordinate = (GetCoordinate(latitude), GetCoordinate(longitude));
 
+                // Validating decoded coordinate. If not valid exception is thrown
                 if (!_validator.IsValid(coordinate))
                 {
                     throw new InvalidOperationException(ExceptionMessageResource.PolylineCharArrayIsMalformed);
@@ -106,7 +105,7 @@ namespace DropoutCoder.PolylineAlgorithm
             // Initializing local variables
             int previousLatitude = 0;
             int previousLongitude = 0;
-            var sb = _pool.Get();
+            var sb = new StringBuilder(coordinates.Count() * 5);
 
             // Looping over coordinates and building encoded result
             foreach (var coordinate in coordinates)
@@ -121,13 +120,10 @@ namespace DropoutCoder.PolylineAlgorithm
                 previousLongitude = longitude;
             }
 
-            var result = sb.ToString();
-
-            _pool.Return(sb);
-
-            return result;
+            return sb.ToString();
 
             #region Local functions
+
             bool TryValidate(IEnumerable<(double Latitude, double Longitude)> collection, out ICollection<CoordinateValidationException> exceptions)
             {
                 exceptions = new List<CoordinateValidationException>(collection.Count());
@@ -165,7 +161,8 @@ namespace DropoutCoder.PolylineAlgorithm
 
                 yield return (char)(rem + Constants.ASCII.QuestionMark);
             }
+
+            #endregion
         }
-        #endregion
     }
 }
